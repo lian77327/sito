@@ -4,24 +4,29 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Cita previa в Испании — помощь с записью онлайн | CitaFácil España</title>
-  <meta name="description" content="Помогаем записаться на cita previa в Испании: Extranjería, Policía, NIE, TIE, empadronamiento и другие госуслуги. Онлайн-поддержка на русском языке." />
-  <meta name="keywords" content="cita previa Испания, запись в extranjería, NIE Испания, TIE Испания, cita previa online, помощь с записью Испания, empadronamiento, полиция Испания" />
+  <title>Cita previa в Испании — запись за 2–5 дней, оплата после результата | CitaFácil España</title>
+  <meta name="description" content="Бесплатная консультация и помощь с cita previa в Испании: NIE, TIE, Extranjería, Policía, empadronamiento. Приоритетная запись 2–5 дней — 100€, оплата после успешного результата. Українською та російською." />
+  <meta name="keywords" content="cita previa Испания, сита превия Испания, запись на ситу Испания, NIE Испания, TIE Испания, Extranjería cita previa, Policía Nacional cita, empadronamiento Испания, cita previa Іспанія, запис на сіту Іспанія, допомога з cita previa" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#0f766e" />
 
   <link rel="canonical" href="https://toponlajn-shkol.vercel.app/" />
+  <link rel="alternate" hreflang="ru" href="https://toponlajn-shkol.vercel.app/?lang=ru" />
+  <link rel="alternate" hreflang="uk" href="https://toponlajn-shkol.vercel.app/?lang=uk" />
+  <link rel="alternate" hreflang="x-default" href="https://toponlajn-shkol.vercel.app/" />
+
+  <link rel="preload" as="image" href="/Editorial.png" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Cita previa в Испании — помощь с записью онлайн" />
-  <meta property="og:description" content="Помощь с записью на cita previa в Испании: быстро, понятно, на русском языке." />
+  <meta property="og:title" content="Cita previa в Испании — запись за 2–5 дней, оплата после результата" />
+  <meta property="og:description" content="Помогаем получить cita previa в Испании. Консультация бесплатно. Приоритетная запись 2–5 дней — 100€. Оплата только после успешной записи." />
   <meta property="og:url" content="https://toponlajn-shkol.vercel.app/" />
   <meta property="og:site_name" content="CitaFácil España" />
   <meta property="og:image" content="https://toponlajn-shkol.vercel.app/og-image.jpg" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Cita previa в Испании — помощь с записью онлайн" />
-  <meta name="twitter:description" content="Помогаем оформить запись на cita previa в Испании без стресса и ошибок." />
+  <meta name="twitter:title" content="Cita previa в Испании — запись за 2–5 дней" />
+  <meta name="twitter:description" content="Бесплатная консультация. Оплата после успешного результата. Помощь с NIE, TIE, Extranjería, Policía, empadronamiento." />
   <meta name="twitter:image" content="https://toponlajn-shkol.vercel.app/og-image.jpg" />
 
   <style>
@@ -33,13 +38,12 @@
       --muted: #60706e;
       --brand: #0f766e;
       --brand-2: #14b8a6;
+      --brand-dark: #0b5f59;
       --accent: #f59e0b;
-      --danger: #ef4444;
       --line: rgba(16, 32, 31, 0.11);
       --shadow: 0 24px 70px rgba(15, 118, 110, 0.14);
       --shadow-soft: 0 14px 40px rgba(16, 32, 31, 0.08);
       --radius: 24px;
-      --radius-sm: 16px;
       --container: 1160px;
       --header-h: 76px;
       --font: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
@@ -83,6 +87,10 @@
       font: inherit;
     }
 
+    button {
+      appearance: none;
+    }
+
     .container {
       width: min(100% - 32px, var(--container));
       margin-inline: auto;
@@ -109,7 +117,7 @@
       top: 0;
       z-index: 50;
       min-height: var(--header-h);
-      background: rgba(247, 251, 250, 0.86);
+      background: rgba(247, 251, 250, 0.88);
       backdrop-filter: blur(18px);
       border-bottom: 1px solid var(--line);
     }
@@ -119,14 +127,14 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
+      gap: 18px;
     }
 
     .logo {
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      font-weight: 900;
+      font-weight: 950;
       letter-spacing: -0.03em;
       white-space: nowrap;
     }
@@ -148,16 +156,16 @@
       color: var(--muted);
       font-size: 12px;
       letter-spacing: 0;
-      font-weight: 700;
+      font-weight: 750;
     }
 
     .site-nav {
       display: flex;
       align-items: center;
-      gap: 22px;
+      gap: 18px;
       color: #314240;
       font-size: 15px;
-      font-weight: 700;
+      font-weight: 750;
     }
 
     .site-nav a {
@@ -172,6 +180,33 @@
       display: flex;
       align-items: center;
       gap: 10px;
+    }
+
+    .lang-switch {
+      display: inline-flex;
+      padding: 4px;
+      gap: 4px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.76);
+    }
+
+    .lang-switch button {
+      min-width: 40px;
+      height: 34px;
+      border: 0;
+      border-radius: 999px;
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 900;
+      transition: background 0.18s ease, color 0.18s ease;
+    }
+
+    .lang-switch button.is-active {
+      background: var(--brand);
+      color: #fff;
     }
 
     .menu-toggle {
@@ -204,8 +239,9 @@
       border: 0;
       border-radius: 999px;
       cursor: pointer;
-      font-weight: 850;
+      font-weight: 900;
       line-height: 1;
+      text-align: center;
       transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
     }
 
@@ -230,15 +266,9 @@
       box-shadow: 0 12px 30px rgba(16, 32, 31, 0.07);
     }
 
-    .btn-ghost {
-      color: #233633;
-      background: rgba(255, 255, 255, 0.72);
-      border: 1px solid var(--line);
-    }
-
     .hero {
       position: relative;
-      padding: 72px 0 48px;
+      padding: 72px 0 46px;
       overflow: hidden;
     }
 
@@ -260,7 +290,7 @@
       background: rgba(20, 184, 166, 0.12);
       color: #0b6b63;
       font-size: 14px;
-      font-weight: 850;
+      font-weight: 900;
     }
 
     .eyebrow::before {
@@ -270,6 +300,7 @@
       border-radius: 50%;
       background: var(--brand-2);
       box-shadow: 0 0 0 6px rgba(20, 184, 166, 0.14);
+      flex: 0 0 auto;
     }
 
     h1,
@@ -282,7 +313,7 @@
 
     h1 {
       font-size: clamp(42px, 6vw, 74px);
-      max-width: 840px;
+      max-width: 860px;
     }
 
     h2 {
@@ -295,7 +326,7 @@
 
     .hero-text {
       margin: 22px 0 0;
-      max-width: 680px;
+      max-width: 710px;
       color: #425452;
       font-size: clamp(18px, 2vw, 21px);
     }
@@ -314,7 +345,7 @@
       margin-top: 22px;
       color: var(--muted);
       font-size: 14px;
-      font-weight: 700;
+      font-weight: 750;
     }
 
     .pill {
@@ -323,7 +354,7 @@
       gap: 7px;
       padding: 9px 12px;
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.76);
+      background: rgba(255, 255, 255, 0.78);
       border: 1px solid var(--line);
       box-shadow: 0 10px 24px rgba(16, 32, 31, 0.05);
     }
@@ -337,12 +368,12 @@
 
     .hero-visual {
       position: relative;
-      min-height: 520px;
+      min-height: 545px;
     }
 
     .visual-card {
       position: relative;
-      min-height: 520px;
+      min-height: 545px;
       padding: 22px;
       border: 1px solid rgba(255, 255, 255, 0.8);
       border-radius: 34px;
@@ -353,24 +384,39 @@
       overflow: hidden;
     }
 
-    .image-slot {
-      height: 300px;
-      border: 1px dashed rgba(15, 118, 110, 0.28);
+    .hero-img {
+      width: 100%;
+      height: 330px;
+      object-fit: cover;
       border-radius: 28px;
-      display: grid;
-      place-items: center;
-      text-align: center;
-      color: #0b6b63;
-      background:
-        linear-gradient(135deg, rgba(20, 184, 166, 0.12), rgba(245, 158, 11, 0.12)),
-        #fff;
-      padding: 24px;
-      font-weight: 850;
+      border: 1px solid rgba(15, 118, 110, 0.10);
+      background: var(--bg-2);
     }
 
-    .image-slot span {
+    .mini-card {
+      position: absolute;
+      top: 74px;
+      right: 8px;
+      width: 205px;
+      padding: 16px;
+      border-radius: 22px;
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .mini-card strong {
       display: block;
-      max-width: 280px;
+      font-size: 26px;
+      letter-spacing: -0.04em;
+      color: var(--brand);
+    }
+
+    .mini-card span {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 750;
     }
 
     .floating-card {
@@ -402,7 +448,8 @@
       color: #0b6b63;
       background: rgba(20, 184, 166, 0.13);
       font-size: 13px;
-      font-weight: 900;
+      font-weight: 950;
+      white-space: nowrap;
     }
 
     .status::before {
@@ -427,37 +474,12 @@
       padding: 12px 0;
       border-top: 1px solid var(--line);
       color: #314240;
-      font-weight: 750;
+      font-weight: 800;
     }
 
     .appointment-row strong {
       color: var(--text);
-    }
-
-    .mini-card {
-      position: absolute;
-      top: 70px;
-      right: -12px;
-      width: 190px;
-      padding: 16px;
-      border-radius: 22px;
-      background: #fff;
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow-soft);
-    }
-
-    .mini-card strong {
-      display: block;
-      font-size: 26px;
-      letter-spacing: -0.04em;
-      color: var(--brand);
-    }
-
-    .mini-card span {
-      display: block;
-      color: var(--muted);
-      font-size: 13px;
-      font-weight: 700;
+      text-align: right;
     }
 
     .trust-strip {
@@ -473,7 +495,7 @@
     .trust-item {
       padding: 18px;
       border-radius: 20px;
-      background: rgba(255, 255, 255, 0.76);
+      background: rgba(255, 255, 255, 0.78);
       border: 1px solid var(--line);
       box-shadow: 0 10px 28px rgba(16, 32, 31, 0.05);
     }
@@ -488,7 +510,7 @@
     .trust-item span {
       color: var(--muted);
       font-size: 14px;
-      font-weight: 650;
+      font-weight: 700;
     }
 
     section {
@@ -500,7 +522,7 @@
     }
 
     .section-head {
-      max-width: 780px;
+      max-width: 810px;
       margin-bottom: 34px;
     }
 
@@ -515,7 +537,9 @@
       font-size: 18px;
     }
 
-    .cards-grid {
+    .cards-grid,
+    .advantage-grid,
+    .case-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 18px;
@@ -526,7 +550,7 @@
       padding: 24px;
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      background: rgba(255, 255, 255, 0.82);
+      background: rgba(255, 255, 255, 0.84);
       box-shadow: 0 12px 34px rgba(16, 32, 31, 0.06);
       overflow: hidden;
     }
@@ -571,7 +595,7 @@
       padding: 0;
       list-style: none;
       color: #405250;
-      font-weight: 650;
+      font-weight: 700;
     }
 
     .card li {
@@ -588,7 +612,7 @@
 
     .highlight {
       background:
-        linear-gradient(135deg, rgba(15, 118, 110, 0.96), rgba(20, 184, 166, 0.92)),
+        linear-gradient(135deg, rgba(15, 118, 110, 0.97), rgba(20, 184, 166, 0.92)),
         var(--brand);
       color: #fff;
     }
@@ -596,7 +620,7 @@
     .highlight p,
     .highlight li,
     .highlight .muted {
-      color: rgba(255, 255, 255, 0.84);
+      color: rgba(255, 255, 255, 0.86);
     }
 
     .highlight .icon {
@@ -634,7 +658,7 @@
       gap: 16px;
       padding: 20px;
       border-radius: 22px;
-      background: rgba(255, 255, 255, 0.78);
+      background: rgba(255, 255, 255, 0.80);
       border: 1px solid var(--line);
     }
 
@@ -671,7 +695,7 @@
 
     .cta-band p {
       margin: 10px 0 0;
-      color: rgba(255,255,255,0.84);
+      color: rgba(255,255,255,0.86);
       font-size: 17px;
     }
 
@@ -679,6 +703,63 @@
       background: #fff;
       color: var(--brand);
       box-shadow: 0 14px 28px rgba(16,32,31,0.13);
+    }
+
+    .price-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .price {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+
+    .price-tag {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 6px;
+      margin: 18px 0;
+      font-weight: 950;
+      letter-spacing: -0.04em;
+      font-size: 39px;
+      color: var(--brand);
+    }
+
+    .price-tag small {
+      font-size: 14px;
+      color: var(--muted);
+      letter-spacing: 0;
+      font-weight: 850;
+    }
+
+    .price .btn {
+      margin-top: auto;
+    }
+
+    .badge {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      padding: 7px 10px;
+      border-radius: 999px;
+      color: #92400e;
+      background: rgba(245, 158, 11, 0.16);
+      font-size: 13px;
+      font-weight: 950;
+    }
+
+    .price-note {
+      margin-top: 18px;
+      padding: 16px 18px;
+      border-radius: 20px;
+      background: rgba(20, 184, 166, 0.10);
+      color: #31504c;
+      border: 1px solid rgba(15, 118, 110, 0.13);
+      font-weight: 800;
     }
 
     .article-wrap {
@@ -704,6 +785,21 @@
       margin: 14px 0 0;
       color: var(--muted);
       font-size: 17px;
+    }
+
+    .article-photo {
+      min-height: 220px;
+      border: 1px dashed rgba(15, 118, 110, 0.28);
+      border-radius: 28px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      color: #0b6b63;
+      background:
+        linear-gradient(135deg, rgba(20, 184, 166, 0.12), rgba(245, 158, 11, 0.12)),
+        #fff;
+      padding: 24px;
+      font-weight: 900;
     }
 
     .article-body {
@@ -745,96 +841,6 @@
       font-size: 15px;
     }
 
-    .price-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .price {
-      display: flex;
-      flex-direction: column;
-      min-height: 100%;
-    }
-
-    .price-tag {
-      display: flex;
-      align-items: baseline;
-      gap: 6px;
-      margin: 18px 0;
-      font-weight: 950;
-      letter-spacing: -0.04em;
-      font-size: 42px;
-      color: var(--brand);
-    }
-
-    .price-tag small {
-      font-size: 15px;
-      color: var(--muted);
-      letter-spacing: 0;
-    }
-
-    .price .btn {
-      margin-top: auto;
-    }
-
-    .badge {
-      display: inline-flex;
-      width: fit-content;
-      align-items: center;
-      padding: 7px 10px;
-      border-radius: 999px;
-      color: #92400e;
-      background: rgba(245, 158, 11, 0.16);
-      font-size: 13px;
-      font-weight: 900;
-    }
-
-    .reviews {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .review {
-      padding: 24px;
-      border-radius: var(--radius);
-      background: #fff;
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow-soft);
-    }
-
-    .stars {
-      color: var(--accent);
-      letter-spacing: 2px;
-      margin-bottom: 14px;
-      font-size: 18px;
-    }
-
-    .review p {
-      margin: 0;
-      color: #405250;
-    }
-
-    .review-author {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-top: 18px;
-      font-weight: 850;
-    }
-
-    .avatar {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      color: #fff;
-      background: linear-gradient(135deg, var(--brand), var(--brand-2));
-      font-weight: 950;
-    }
-
     .faq-list {
       display: grid;
       gap: 12px;
@@ -853,7 +859,7 @@
     summary {
       padding: 20px 22px;
       cursor: pointer;
-      font-weight: 900;
+      font-weight: 950;
       list-style: none;
       display: flex;
       justify-content: space-between;
@@ -914,14 +920,33 @@
       border-radius: 18px;
       background: var(--bg-2);
       border: 1px solid rgba(15, 118, 110, 0.10);
-      font-weight: 850;
+      font-weight: 900;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
     }
 
-    .contact-method span {
+    .method-icon {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      flex: 0 0 auto;
+    }
+
+    .method-icon svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .method-text small {
       display: block;
       color: var(--muted);
       font-size: 13px;
-      font-weight: 700;
+      font-weight: 750;
     }
 
     .lead-form {
@@ -940,7 +965,7 @@
       gap: 7px;
       color: #314240;
       font-size: 14px;
-      font-weight: 850;
+      font-weight: 900;
     }
 
     input,
@@ -994,18 +1019,24 @@
       display: flex;
       flex-wrap: wrap;
       gap: 14px;
-      font-weight: 800;
+      font-weight: 850;
     }
 
     .disclaimer {
       margin-top: 14px;
       color: #70807e;
       font-size: 12px;
-      max-width: 900px;
+      max-width: 940px;
     }
 
     .mobile-cta {
       display: none;
+    }
+
+    @media (max-width: 1120px) {
+      .price-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     @media (max-width: 1020px) {
@@ -1022,7 +1053,7 @@
       }
 
       .visual-card {
-        min-height: 460px;
+        min-height: 510px;
       }
 
       .article-aside {
@@ -1031,8 +1062,8 @@
 
       .trust-grid,
       .cards-grid,
-      .price-grid,
-      .reviews {
+      .advantage-grid,
+      .case-grid {
         grid-template-columns: repeat(2, 1fr);
       }
 
@@ -1041,7 +1072,7 @@
       }
     }
 
-    @media (max-width: 860px) {
+    @media (max-width: 900px) {
       .menu-toggle {
         display: inline-block;
       }
@@ -1112,8 +1143,9 @@
 
       .trust-grid,
       .cards-grid,
-      .price-grid,
-      .reviews {
+      .advantage-grid,
+      .case-grid,
+      .price-grid {
         grid-template-columns: 1fr;
       }
 
@@ -1123,12 +1155,12 @@
 
       .visual-card {
         border-radius: 26px;
-        min-height: 430px;
+        min-height: 500px;
         padding: 16px;
       }
 
-      .image-slot {
-        height: 250px;
+      .hero-img {
+        height: 265px;
         border-radius: 22px;
       }
 
@@ -1182,6 +1214,18 @@
         font-size: 14px;
       }
     }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+      }
+    }
   </style>
 
   <script type="application/ld+json">
@@ -1190,26 +1234,61 @@
     "@type": "ProfessionalService",
     "name": "CitaFácil España",
     "url": "https://toponlajn-shkol.vercel.app/",
-    "description": "Консультационная и организационная помощь с записью на cita previa в Испании.",
+    "description": "Помощь с записью на cita previa в Испании. Бесплатная консультация, оплата после успешной записи.",
     "areaServed": {
       "@type": "Country",
       "name": "Spain"
     },
-    "availableLanguage": ["Russian", "Spanish", "English"],
-    "priceRange": "€€",
+    "availableLanguage": ["Russian", "Ukrainian", "Spanish"],
+    "priceRange": "0€-100€",
     "serviceType": [
       "Cita previa",
       "Extranjería",
       "NIE",
       "TIE",
       "Empadronamiento",
-      "Policía Nacional"
+      "Policía Nacional",
+      "Seguridad Social"
     ],
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+34 600 000 000",
       "contactType": "customer support",
-      "availableLanguage": ["Russian", "Spanish", "English"]
+      "availableLanguage": ["Russian", "Ukrainian", "Spanish"]
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Тарифы помощи с cita previa",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "Бесплатная консультация",
+          "price": "0",
+          "priceCurrency": "EUR",
+          "description": "Разбор ситуации и подбор подходящей процедуры."
+        },
+        {
+          "@type": "Offer",
+          "name": "Эконом запись",
+          "price": "50",
+          "priceCurrency": "EUR",
+          "description": "Менее срочная помощь с записью. Оплата после успешного результата."
+        },
+        {
+          "@type": "Offer",
+          "name": "Стандартная запись",
+          "price": "70",
+          "priceCurrency": "EUR",
+          "description": "Активная помощь с записью. Оплата после успешного результата."
+        },
+        {
+          "@type": "Offer",
+          "name": "Приоритетная запись 2–5 дней",
+          "price": "100",
+          "priceCurrency": "EUR",
+          "description": "Приоритетная помощь с записью на cita previa за 2–5 дней при наличии доступных окон. Оплата после успешного результата."
+        }
+      ]
     }
   }
   </script>
@@ -1221,10 +1300,26 @@
     "mainEntity": [
       {
         "@type": "Question",
+        "name": "Когда нужно платить?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Консультация бесплатна. Оплата за услугу производится только после успешного результата — когда запись на cita previa найдена и подтверждена."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Сколько стоит приоритетная запись?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Приоритетная помощь с записью на cita previa за 2–5 дней стоит 100 евро. Оплата только после успешной записи."
+        }
+      },
+      {
+        "@type": "Question",
         "name": "Вы гарантируете получение cita previa?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Мы не являемся государственным органом и не можем гарантировать наличие слотов. Мы помогаем правильно подготовить данные, выбрать услугу, мониторить официальные окна и оформить запись законным способом."
+          "text": "Мы не являемся государственным органом и не можем влиять на официальные системы. Мы помогаем подготовить данные, выбрать процедуру и найти доступное окно законным способом. Оплата берётся после подтвержденной записи."
         }
       },
       {
@@ -1232,23 +1327,7 @@
         "name": "В каких городах Испании вы работаете?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Мы работаем онлайн по всей Испании: Madrid, Barcelona, Valencia, Alicante, Málaga, Sevilla, Murcia, Zaragoza, Bilbao и другие города."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Какие документы нужны для записи?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Список зависит от процедуры: NIE, TIE, extranjería, policía, empadronamiento и других услуг. После заявки мы подскажем, какие данные и документы нужны именно в вашем случае."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Можно ли обратиться, если я не говорю по-испански?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Да. Мы объясняем процесс на русском языке, помогаем разобраться с испанскими формами и подсказываем дальнейшие шаги."
+          "text": "Работаем онлайн по всей Испании: Madrid, Barcelona, Valencia, Alicante, Málaga, Sevilla, Murcia, Zaragoza, Bilbao и другие города."
         }
       }
     ]
@@ -1257,7 +1336,7 @@
 </head>
 
 <body>
-  <a class="skip-link" href="#main">Перейти к содержимому</a>
+  <a class="skip-link" href="#main" data-i18n="skip">Перейти к содержимому</a>
 
   <header class="site-header">
     <div class="container header-inner">
@@ -1270,21 +1349,27 @@
         </span>
         <span>
           CitaFácil
-          <small>España онлайн</small>
+          <small data-i18n="logo.sub">España онлайн</small>
         </span>
       </a>
 
       <nav class="site-nav" id="siteNav" aria-label="Основная навигация">
-        <a href="#services">Услуги</a>
-        <a href="#process">Как работаем</a>
-        <a href="#article">Гид</a>
-        <a href="#prices">Стоимость</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contacts">Контакты</a>
+        <a href="#services" data-i18n="nav.services">Услуги</a>
+        <a href="#prices" data-i18n="nav.prices">Тарифы</a>
+        <a href="#process" data-i18n="nav.process">Как работаем</a>
+        <a href="#article" data-i18n="nav.article">Гид</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+        <a href="#contacts" data-i18n="nav.contacts">Контакты</a>
       </nav>
 
       <div class="header-actions">
-        <a class="btn btn-primary" href="#contacts">Получить помощь</a>
+        <div class="lang-switch" aria-label="Language switcher">
+          <button type="button" data-lang-switch="ru" class="is-active">RU</button>
+          <button type="button" data-lang-switch="uk">UA</button>
+        </div>
+
+        <a class="btn btn-primary" href="#contacts" data-i18n="nav.cta">Бесплатная консультация</a>
+
         <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="siteNav">
           <span></span>
           <span></span>
@@ -1298,72 +1383,65 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <p class="eyebrow">Онлайн-помощь по всей Испании</p>
+          <p class="eyebrow" data-i18n="hero.eyebrow">Консультация бесплатно · оплата после результата</p>
 
-          <h1>Поможем записаться на cita previa без стресса и ошибок</h1>
+          <h1 data-i18n="hero.title">Cita previa в Испании: поможем получить запись за 2–5 дней</h1>
 
-          <p class="hero-text">
-            Разберём вашу ситуацию, подскажем нужную процедуру, подготовим данные
-            и поможем оформить запись через официальные сервисы Испании.
+          <p class="hero-text" data-i18n="hero.text">
+            Помогаем с записью на cita previa для NIE, TIE, Extranjería, Policía, empadronamiento и других процедур. Вы платите только после успешной подтверждённой записи.
           </p>
 
           <div class="hero-actions">
-            <button class="btn btn-primary" type="button" data-whatsapp data-message="Здравствуйте! Хочу получить помощь с cita previa в Испании.">
-              Написать в WhatsApp
+            <button class="btn btn-primary" type="button" data-whatsapp-key="hero">
+              <span data-i18n="hero.cta1">Получить бесплатную консультацию</span>
             </button>
-            <a class="btn btn-secondary" href="#services">
-              Посмотреть услуги
-            </a>
+            <a class="btn btn-secondary" href="#prices" data-i18n="hero.cta2">Смотреть тарифы</a>
           </div>
 
           <div class="hero-note" aria-label="Преимущества">
             <span class="pill">
               <svg viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Ответ в течение дня
+              <span data-i18n="hero.pill1">Оплата после записи</span>
             </span>
             <span class="pill">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z" stroke="currentColor" stroke-width="2"/><path d="M8 12h8M12 8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              Русский / Español
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 6v6l4 2M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <span data-i18n="hero.pill2">Приоритет 2–5 дней</span>
             </span>
             <span class="pill">
               <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-4.4 7-11a7 7 0 1 0-14 0c0 6.6 7 11 7 11Z" stroke="currentColor" stroke-width="2"/><path d="M12 10.5h.01" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>
-              Madrid, Barcelona, Valencia и др.
+              <span data-i18n="hero.pill3">По всей Испании</span>
             </span>
           </div>
         </div>
 
         <div class="hero-visual" aria-label="Визуальный блок">
           <div class="visual-card">
-           
-              <img src="/Editorial.png" alt="Помощь с cita previa в Испании" loading="eager" style="width:100%;height:300px;object-fit:cover;border-radius:28px;">
-        
-            <div class="image-slot">
-              <span>Место для вашего фото: команда, Испания, документы или довольный клиент</span>
-            </div>
+            <!-- Замените /Editorial.png на своё фото при необходимости -->
+            <img class="hero-img" src="/Editorial.png" alt="Помощь с cita previa в Испании" loading="eager" data-i18n-alt="hero.imgAlt" />
 
             <div class="mini-card">
-              <strong>3 шага</strong>
-              <span>заявка → проверка → запись</span>
+              <strong data-i18n="hero.miniTitle">100€</strong>
+              <span data-i18n="hero.miniText">приоритет 2–5 дней, оплата после результата</span>
             </div>
 
             <div class="floating-card">
               <div class="floating-card-top">
-                <strong>Пример заявки</strong>
-                <span class="status">в работе</span>
+                <strong data-i18n="hero.cardTitle">Пример результата</strong>
+                <span class="status" data-i18n="hero.cardStatus">запись найдена</span>
               </div>
 
               <div class="appointment">
                 <div class="appointment-row">
-                  <span>Услуга</span>
-                  <strong>TIE / Policía</strong>
+                  <span data-i18n="hero.row1Label">Услуга</span>
+                  <strong data-i18n="hero.row1Value">TIE / Policía</strong>
                 </div>
                 <div class="appointment-row">
-                  <span>Город</span>
-                  <strong>Valencia</strong>
+                  <span data-i18n="hero.row2Label">Срок</span>
+                  <strong data-i18n="hero.row2Value">2–5 дней</strong>
                 </div>
                 <div class="appointment-row">
-                  <span>Язык</span>
-                  <strong>RU / ES</strong>
+                  <span data-i18n="hero.row3Label">Оплата</span>
+                  <strong data-i18n="hero.row3Value">после подтверждения</strong>
                 </div>
               </div>
             </div>
@@ -1371,24 +1449,24 @@
         </div>
       </div>
     </section>
-
+    
     <div class="trust-strip">
       <div class="container trust-grid">
         <div class="trust-item">
-          <b>Онлайн</b>
-          <span>без визита в офис на первом этапе</span>
+          <b data-i18n="trust.t1">0€</b>
+          <span data-i18n="trust.d1">консультация бесплатно</span>
         </div>
         <div class="trust-item">
-          <b>Понятно</b>
-          <span>объясняем процесс простыми словами</span>
+          <b data-i18n="trust.t2">2–5 дней</b>
+          <span data-i18n="trust.d2">приоритетная запись</span>
         </div>
         <div class="trust-item">
-          <b>Аккуратно</b>
-          <span>проверяем данные перед отправкой</span>
+          <b data-i18n="trust.t3">После результата</b>
+          <span data-i18n="trust.d3">никакой предоплаты за запись</span>
         </div>
         <div class="trust-item">
-          <b>По Испании</b>
-          <span>работаем с разными провинциями</span>
+          <b data-i18n="trust.t4">RU / UA / ES</b>
+          <span data-i18n="trust.d4">поддержка на понятном языке</span>
         </div>
       </div>
     </div>
@@ -1396,11 +1474,10 @@
     <section class="section" id="services">
       <div class="container">
         <div class="section-head center">
-          <p class="eyebrow">Что мы делаем</p>
-          <h2>Помогаем с популярными видами cita previa</h2>
-          <p>
-            Подберём правильную категорию записи, проверим исходные данные
-            и поможем пройти процесс без лишних попыток.
+          <p class="eyebrow" data-i18n="services.eyebrow">Что мы делаем</p>
+          <h2 data-i18n="services.title">Помогаем с популярными видами cita previa</h2>
+          <p data-i18n="services.text">
+            Разберём вашу ситуацию, выберем правильную категорию записи и поможем получить подтверждённую cita через официальные сервисы Испании.
           </p>
         </div>
 
@@ -1409,12 +1486,12 @@
             <div class="icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none"><path d="M6 3h9l3 3v15H6V3Z" stroke="currentColor" stroke-width="2"/><path d="M9 13h6M9 17h6M14 3v4h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
             </div>
-            <h3>Extranjería</h3>
-            <p>Помощь с выбором процедуры и подготовкой к записи в офис по делам иностранцев.</p>
+            <h3 data-i18n="service1.title">Extranjería</h3>
+            <p data-i18n="service1.text">Запись в офис по делам иностранцев для популярных процедур.</p>
             <ul>
-              <li>проверка типа процедуры</li>
-              <li>подсказки по документам</li>
-              <li>сопровождение по шагам</li>
+              <li data-i18n="service1.li1">подбор правильной процедуры</li>
+              <li data-i18n="service1.li2">проверка данных перед записью</li>
+              <li data-i18n="service1.li3">оплата после успешного результата</li>
             </ul>
           </article>
 
@@ -1422,12 +1499,12 @@
             <div class="icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none"><path d="M12 3 4 7v6c0 5 3.4 7.7 8 9 4.6-1.3 8-4 8-9V7l-8-4Z" stroke="currentColor" stroke-width="2"/><path d="m8.5 12.5 2.2 2.2 4.8-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
-            <h3>NIE / TIE / Policía</h3>
-            <p>Одна из самых востребованных услуг для иностранцев в Испании.</p>
+            <h3 data-i18n="service2.title">NIE / TIE / Policía</h3>
+            <p data-i18n="service2.text">Одна из самых востребованных записей для иностранцев в Испании.</p>
             <ul>
-              <li>помощь с записью в Policía Nacional</li>
-              <li>разъяснение требований</li>
-              <li>контроль данных перед записью</li>
+              <li data-i18n="service2.li1">помощь с записью в Policía Nacional</li>
+              <li data-i18n="service2.li2">приоритетный тариф 2–5 дней</li>
+              <li data-i18n="service2.li3">платите только после подтверждения</li>
             </ul>
           </article>
 
@@ -1435,12 +1512,12 @@
             <div class="icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none"><path d="M4 10.5 12 4l8 6.5V20H5v-9.5Z" stroke="currentColor" stroke-width="2"/><path d="M9 20v-6h6v6" stroke="currentColor" stroke-width="2"/></svg>
             </div>
-            <h3>Empadronamiento</h3>
-            <p>Подскажем, как записаться в ayuntamiento и что обычно требуется для прописки.</p>
+            <h3 data-i18n="service3.title">Empadronamiento</h3>
+            <p data-i18n="service3.text">Помощь с записью в ayuntamiento для оформления прописки.</p>
             <ul>
-              <li>выбор нужного муниципалитета</li>
-              <li>проверка базовых данных</li>
-              <li>инструкция перед визитом</li>
+              <li data-i18n="service3.li1">выбор муниципалитета</li>
+              <li data-i18n="service3.li2">подсказки по документам</li>
+              <li data-i18n="service3.li3">инструкция перед визитом</li>
             </ul>
           </article>
 
@@ -1448,12 +1525,12 @@
             <div class="icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11Z" stroke="currentColor" stroke-width="2"/><path d="M9 10h6M12 7v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
             </div>
-            <h3>Seguridad Social</h3>
-            <p>Помогаем разобраться с записью и базовыми действиями в системе соцстраха.</p>
+            <h3 data-i18n="service4.title">Seguridad Social</h3>
+            <p data-i18n="service4.text">Поможем понять, какая запись нужна в системе соцстраха.</p>
             <ul>
-              <li>проверка направления</li>
-              <li>подбор офиса</li>
-              <li>инструкция по дальнейшим шагам</li>
+              <li data-i18n="service4.li1">разбор ситуации</li>
+              <li data-i18n="service4.li2">подбор офиса</li>
+              <li data-i18n="service4.li3">сопровождение по шагам</li>
             </ul>
           </article>
 
@@ -1461,12 +1538,12 @@
             <div class="icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none"><path d="M7 17h10M6 17l1.2-5.5A3 3 0 0 1 10.1 9h3.8a3 3 0 0 1 2.9 2.5L18 17M8 17v2M16 17v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
             </div>
-            <h3>DGT и другие записи</h3>
-            <p>Консультационная помощь с другими административными записями в Испании.</p>
+            <h3 data-i18n="service5.title">DGT и другие записи</h3>
+            <p data-i18n="service5.text">Консультационная помощь с другими административными cita.</p>
             <ul>
-              <li>проверка доступности услуги</li>
-              <li>ориентация по официальному сайту</li>
-              <li>помощь с формами</li>
+              <li data-i18n="service5.li1">проверка доступности услуги</li>
+              <li data-i18n="service5.li2">ориентация по официальному сайту</li>
+              <li data-i18n="service5.li3">без предоплаты за запись</li>
             </ul>
           </article>
 
@@ -1474,14 +1551,160 @@
             <div class="icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v8Z" stroke="currentColor" stroke-width="2"/></svg>
             </div>
-            <h3>Разовая консультация</h3>
-            <p>Если вы не уверены, какая именно cita нужна, начните с короткой консультации.</p>
+            <h3 data-i18n="service6.title">Бесплатная консультация</h3>
+            <p data-i18n="service6.text">Если не знаете, какая cita нужна — начните с бесплатного разбора.</p>
             <ul>
-              <li>разбор вашей ситуации</li>
-              <li>план действий</li>
-              <li>ответы на вопросы</li>
+              <li data-i18n="service6.li1">определим процедуру</li>
+              <li data-i18n="service6.li2">подскажем тариф</li>
+              <li data-i18n="service6.li3">объясним дальнейшие шаги</li>
             </ul>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="advantages">
+      <div class="container">
+        <div class="section-head center">
+          <p class="eyebrow" data-i18n="advantages.eyebrow">Почему выбирают нас</p>
+          <h2 data-i18n="advantages.title">Главное преимущество — вы платите после результата</h2>
+          <p data-i18n="advantages.text">
+            Мы берём оплату только после того, как запись найдена и подтверждена. Консультация всегда бесплатна.
+          </p>
+        </div>
+
+        <div class="advantage-grid">
+          <article class="card">
+            <h3 data-i18n="adv1.title">Без предоплаты</h3>
+            <p data-i18n="adv1.text">Вы не рискуете деньгами: оплата за запись только после успешного подтверждения cita.</p>
+          </article>
+
+          <article class="card">
+            <h3 data-i18n="adv2.title">Приоритет 2–5 дней</h3>
+            <p data-i18n="adv2.text">Для срочных случаев есть приоритетный тариф — активный поиск ближайших доступных окон.</p>
+          </article>
+
+          <article class="card">
+            <h3 data-i18n="adv3.title">Правильная категория</h3>
+            <p data-i18n="adv3.text">Помогаем не ошибиться с процедурой, офисом и типом записи.</p>
+          </article>
+
+          <article class="card">
+            <h3 data-i18n="adv4.title">Поддержка RU / UA</h3>
+            <p data-i18n="adv4.text">Объясняем процесс на русском и украинском, помогаем разобраться с испанскими формами.</p>
+          </article>
+
+          <article class="card">
+            <h3 data-i18n="adv5.title">По всей Испании</h3>
+            <p data-i18n="adv5.text">Работаем онлайн с разными провинциями: Madrid, Barcelona, Valencia, Alicante, Málaga и другими.</p>
+          </article>
+
+          <article class="card">
+            <h3 data-i18n="adv6.title">Понятный процесс</h3>
+            <p data-i18n="adv6.text">После консультации вы знаете, что делать дальше, какие данные нужны и сколько будет стоить помощь.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="prices">
+      <div class="container">
+        <div class="section-head center">
+          <p class="eyebrow" data-i18n="prices.eyebrow">Тарифы</p>
+          <h2 data-i18n="prices.title">Оплата только после успешной записи</h2>
+          <p data-i18n="prices.text">
+            Выберите скорость поиска. Консультация бесплатна, а оплата за запись — только после подтверждённого результата.
+          </p>
+        </div>
+
+        <div class="price-grid">
+          <article class="card price">
+            <span class="badge" data-i18n="price0.badge">Бесплатно</span>
+            <h3 style="margin-top: 14px;" data-i18n="price0.title">Консультация</h3>
+            <p data-i18n="price0.text">Разберём ситуацию, подскажем нужную процедуру и подходящий тариф.</p>
+
+            <div class="price-tag">
+              <span data-i18n="price0.price">0€</span>
+              <small data-i18n="price0.small">/ бесплатно</small>
+            </div>
+
+            <ul>
+              <li data-i18n="price0.li1">разбор вашей ситуации</li>
+              <li data-i18n="price0.li2">подбор типа cita</li>
+              <li data-i18n="price0.li3">рекомендация по срокам</li>
+            </ul>
+
+            <button class="btn btn-secondary" type="button" data-whatsapp-key="consult">
+              <span data-i18n="price0.btn">Получить консультацию</span>
+            </button>
+          </article>
+
+          <article class="card price">
+            <span class="badge" data-i18n="price1.badge">Без спешки</span>
+            <h3 style="margin-top: 14px;" data-i18n="price1.title">Эконом</h3>
+            <p data-i18n="price1.text">Для случаев, когда запись нужна, но нет критичной срочности.</p>
+
+            <div class="price-tag">
+              <span data-i18n="price1.price">50€</span>
+              <small data-i18n="price1.small">после результата</small>
+            </div>
+
+            <ul>
+              <li data-i18n="price1.li1">ориентир 10–20 дней</li>
+              <li data-i18n="price1.li2">проверка данных</li>
+              <li data-i18n="price1.li3">оплата только после записи</li>
+            </ul>
+
+            <button class="btn btn-secondary" type="button" data-whatsapp-key="economy">
+              <span data-i18n="price1.btn">Выбрать эконом</span>
+            </button>
+          </article>
+
+          <article class="card price">
+            <span class="badge" data-i18n="price2.badge">Оптимально</span>
+            <h3 style="margin-top: 14px;" data-i18n="price2.title">Стандарт</h3>
+            <p data-i18n="price2.text">Активная помощь с поиском записи для большинства ситуаций.</p>
+
+            <div class="price-tag">
+              <span data-i18n="price2.price">70€</span>
+              <small data-i18n="price2.small">после результата</small>
+            </div>
+
+            <ul>
+              <li data-i18n="price2.li1">ориентир 5–10 дней</li>
+              <li data-i18n="price2.li2">активный поиск окон</li>
+              <li data-i18n="price2.li3">оплата после подтверждения</li>
+            </ul>
+
+            <button class="btn btn-secondary" type="button" data-whatsapp-key="standard">
+              <span data-i18n="price2.btn">Выбрать стандарт</span>
+            </button>
+          </article>
+
+          <article class="card price highlight">
+            <span class="badge" data-i18n="price3.badge">Самый быстрый</span>
+            <h3 style="margin-top: 14px;" data-i18n="price3.title">Приоритет</h3>
+            <p data-i18n="price3.text">Для срочных случаев: максимально активная работа с ближайшими доступными окнами.</p>
+
+            <div class="price-tag" style="color: #fff;">
+              <span data-i18n="price3.price">100€</span>
+              <small style="color: rgba(255,255,255,0.82);" data-i18n="price3.small">2–5 дней</small>
+            </div>
+
+            <ul>
+              <li data-i18n="price3.li1">приоритетный поиск 2–5 дней</li>
+              <li data-i18n="price3.li2">проверка данных перед записью</li>
+              <li data-i18n="price3.li3">оплата только после результата</li>
+            </ul>
+
+            <button class="btn" type="button" data-whatsapp-key="priority">
+              <span data-i18n="price3.btn">Хочу приоритет</span>
+            </button>
+          </article>
+        </div>
+
+        <div class="price-note" data-i18n="prices.note">
+          Важно: успешный результат — это подтверждённая запись на cita previa. Решение государственного органа по документам зависит только от официального ведомства.
         </div>
       </div>
     </section>
@@ -1489,17 +1712,15 @@
     <section class="section" id="process">
       <div class="container split">
         <div class="panel">
-          <p class="eyebrow">Как это работает</p>
-          <h2>Простой процесс в 4 шага</h2>
-          <p style="color: var(--muted); margin-top: 16px;">
-            Мы не продаём государственные услуги и не являемся госорганом.
-            Наша задача — помочь вам корректно пройти процесс записи и не потеряться
-            в испанских формах.
+          <p class="eyebrow" data-i18n="process.eyebrow">Как это работает</p>
+          <h2 data-i18n="process.title">4 шага до подтверждённой записи</h2>
+          <p style="color: var(--muted); margin-top: 16px;" data-i18n="process.text">
+            Мы работаем прозрачно: сначала бесплатная консультация, потом поиск записи, и только после подтверждённого результата — оплата.
           </p>
 
           <div style="margin-top: 24px;">
-            <button class="btn btn-primary" type="button" data-whatsapp data-message="Здравствуйте! Хочу узнать, какая cita previa мне нужна.">
-              Получить консультацию
+            <button class="btn btn-primary" type="button" data-whatsapp-key="process">
+              <span data-i18n="process.btn">Начать бесплатно</span>
             </button>
           </div>
         </div>
@@ -1508,32 +1729,32 @@
           <div class="step">
             <div class="step-num">1</div>
             <div>
-              <h3>Вы оставляете заявку</h3>
-              <p>Пишите нам в WhatsApp или заполняете форму на сайте.</p>
+              <h3 data-i18n="step1.title">Вы пишете нам</h3>
+              <p data-i18n="step1.text">Описываете город, процедуру и срочность. Консультация бесплатна.</p>
             </div>
           </div>
 
           <div class="step">
             <div class="step-num">2</div>
             <div>
-              <h3>Мы уточняем вашу ситуацию</h3>
-              <p>Проверяем город, процедуру, документы и важные детали.</p>
+              <h3 data-i18n="step2.title">Мы проверяем детали</h3>
+              <p data-i18n="step2.text">Уточняем данные, категорию записи и возможные сроки.</p>
             </div>
           </div>
 
           <div class="step">
             <div class="step-num">3</div>
             <div>
-              <h3>Готовим данные для записи</h3>
-              <p>Помогаем избежать частых ошибок в выборе категории и заполнении форм.</p>
+              <h3 data-i18n="step3.title">Ищем доступное окно</h3>
+              <p data-i18n="step3.text">Работаем с официальными системами и подбираем подходящую cita.</p>
             </div>
           </div>
 
           <div class="step">
             <div class="step-num">4</div>
             <div>
-              <h3>Сопровождаем до результата</h3>
-              <p>Передаём инструкции и подсказываем, что делать после получения записи.</p>
+              <h3 data-i18n="step4.title">Вы получаете подтверждение</h3>
+              <p data-i18n="step4.text">После успешной записи отправляем детали — и только тогда производится оплата.</p>
             </div>
           </div>
         </div>
@@ -1544,13 +1765,13 @@
       <div class="container">
         <div class="cta-band">
           <div>
-            <h2>Не знаете, какая cita нужна именно вам?</h2>
-            <p>
-              Напишите нам город, тип документа и вашу ситуацию — подскажем ближайший понятный шаг.
+            <h2 data-i18n="cta.title">Не знаете, какая cita нужна именно вам?</h2>
+            <p data-i18n="cta.text">
+              Напишите город, тип документа и вашу ситуацию — бесплатно подскажем ближайший понятный шаг.
             </p>
           </div>
-          <button class="btn" type="button" data-whatsapp data-message="Здравствуйте! Не знаю, какая cita previa мне нужна. Можете подсказать?">
-            Спросить в WhatsApp
+          <button class="btn" type="button" data-whatsapp-key="cta">
+            <span data-i18n="cta.btn">Спросить бесплатно</span>
           </button>
         </div>
       </div>
@@ -1561,82 +1782,59 @@
         <div class="article-wrap">
           <div class="article-hero">
             <div>
-              <p class="eyebrow">Полезный гид</p>
-              <h2>Как получить cita previa в Испании и не запутаться</h2>
-              <p>
-                Ниже расположен SEO-блок статьи. Если у вас есть готовая статья,
-                замените этот текст на свой — структура страницы уже подготовлена.
+              <p class="eyebrow" data-i18n="article.eyebrow">Полезный гид</p>
+              <h2 data-i18n="article.title">Cita previa в Испании: как получить запись и не потерять время</h2>
+              <p data-i18n="article.lead">
+                Кратко объясняем, зачем нужна cita previa, почему сложно найти свободное окно и как мы помогаем получить подтверждённую запись без предоплаты.
               </p>
             </div>
 
-            <div class="image-slot" style="height: 220px;">
-              <span>Место для фото к статье</span>
+            <div class="article-photo" data-i18n="article.photo">
+              Место для фото к статье
             </div>
           </div>
 
           <div class="article-body">
             <article class="article-content">
-              <!--
-                ВСТАВЬТЕ ВАШУ СТАТЬЮ СЮДА.
-                Можно заменить весь текст внутри <article class="article-content">.
-              -->
-
-              <p>
-                Cita previa — это предварительная запись на приём в государственное учреждение
-                Испании. Она может понадобиться для оформления или обновления документов,
-                получения NIE, TIE, прохождения процедур в extranjería, полиции, ayuntamiento,
-                Seguridad Social и других ведомствах.
+              <p data-i18n="article.p1">
+                Cita previa — это предварительная запись на приём в государственное учреждение Испании. Она может понадобиться для NIE, TIE, процедур Extranjería, записи в Policía Nacional, оформления empadronamiento, Seguridad Social и других административных вопросов.
               </p>
 
-              <h3>Почему с записью бывают сложности</h3>
-              <p>
-                Главная проблема — ограниченное количество доступных окон и разные правила
-                в зависимости от провинции. Один и тот же запрос может называться по-разному
-                на разных официальных порталах, а ошибка в выборе категории приводит к потере
-                времени.
+              <h3 data-i18n="article.h1">Почему запись бывает трудно получить</h3>
+              <p data-i18n="article.p2">
+                Главная сложность — ограниченное количество свободных окон. В разных провинциях Испании слоты появляются в разное время, сайты могут работать нестабильно, а название нужной процедуры не всегда очевидно.
               </p>
 
               <ul>
-                <li>слоты появляются нерегулярно;</li>
-                <li>сайты могут работать нестабильно;</li>
-                <li>не всегда понятно, какую процедуру выбирать;</li>
-                <li>для разных документов нужны разные данные;</li>
-                <li>часть инструкций доступна только на испанском языке.</li>
+                <li data-i18n="article.li1">не всегда понятно, какую категорию выбрать;</li>
+                <li data-i18n="article.li2">слоты могут появляться нерегулярно;</li>
+                <li data-i18n="article.li3">ошибка в данных может привести к потере записи;</li>
+                <li data-i18n="article.li4">инструкции часто доступны только на испанском языке.</li>
               </ul>
 
-              <h3>Как мы можем помочь</h3>
-              <p>
-                Мы помогаем разобраться, какая запись подходит под вашу ситуацию,
-                проверяем исходную информацию и объясняем процесс понятным языком.
-                Это особенно полезно, если вы недавно переехали в Испанию, не говорите
-                по-испански или уже несколько раз пытались записаться самостоятельно.
+              <h3 data-i18n="article.h2">Как помогает наш сервис</h3>
+              <p data-i18n="article.p3">
+                Мы бесплатно консультируем, проверяем исходные данные, помогаем выбрать правильную процедуру и ищем доступное окно. Если запись успешно найдена и подтверждена, вы оплачиваете выбранный тариф. Если результата нет — оплаты за запись нет.
               </p>
 
-              <h3>Важно знать</h3>
-              <p>
-                Мы не являемся государственным органом и не можем влиять на решения ведомств.
-                Доступность записи зависит от официальных систем. Наша услуга — это
-                консультационная и организационная помощь: подготовка, проверка, навигация
-                по процессу и сопровождение.
+              <h3 data-i18n="article.h3">Что значит “оплата после результата”</h3>
+              <p data-i18n="article.p4">
+                Результатом считается подтверждённая cita previa с датой, временем и данными приёма. Мы не берём предоплату за поиск записи. При этом важно понимать: итоговое решение по документам принимает только государственный орган Испании.
               </p>
 
-              <h3>Что подготовить перед обращением</h3>
-              <p>
-                Чтобы быстрее оценить ситуацию, желательно указать город, нужную процедуру,
-                тип документа, текущий статус в Испании и желаемые сроки. Если вы не уверены,
-                какая именно процедура нужна, просто опишите вашу ситуацию — мы подскажем,
-                с чего начать.
+              <h3 data-i18n="article.h4">Что подготовить перед обращением</h3>
+              <p data-i18n="article.p5">
+                Для быстрого разбора напишите город, нужную процедуру, тип документа, текущий статус и желаемые сроки. Если вы не уверены, какая запись нужна, просто опишите ситуацию — консультация бесплатна.
               </p>
             </article>
 
             <aside class="article-aside">
-              <h3>Нужна помощь?</h3>
-              <p>
-                Отправьте короткое описание ситуации — мы подскажем, какая cita может быть нужна
-                и какие данные подготовить.
+              <h3 data-i18n="aside.title">Нужна cita?</h3>
+              <p data-i18n="aside.text">
+                Напишите нам в WhatsApp — бесплатно подскажем процедуру, сроки и тариф. Оплата только после успешной записи.
               </p>
-              <button class="btn btn-primary" type="button" data-whatsapp data-message="Здравствуйте! Прочитал(а) гид на сайте. Нужна помощь с cita previa.">
-                Написать сейчас
+              <button class="btn btn-primary" type="button" data-whatsapp-key="aside">
+                <span data-i18n="aside.btn">Написать сейчас</span>
               </button>
             </aside>
           </div>
@@ -1644,123 +1842,28 @@
       </div>
     </section>
 
-    <section class="section" id="prices">
+    <section class="section" id="cases">
       <div class="container">
         <div class="section-head center">
-          <p class="eyebrow">Стоимость</p>
-          <h2>Выберите удобный формат помощи</h2>
-          <p>
-            Финальная стоимость зависит от города, процедуры, срочности и объёма сопровождения.
-          </p>
+          <p class="eyebrow" data-i18n="cases.eyebrow">Типичные ситуации</p>
+          <h2 data-i18n="cases.title">Когда к нам обращаются чаще всего</h2>
+          <p data-i18n="cases.text">Если узнаёте свою ситуацию — напишите нам, консультация бесплатна.</p>
         </div>
 
-        <div class="price-grid">
-          <article class="card price">
-            <span class="badge">Для начала</span>
-            <h3 style="margin-top: 14px;">Консультация</h3>
-            <p>Разбор ситуации и рекомендации по следующему шагу.</p>
-
-            <div class="price-tag">
-              от 15€ <small>/ запрос</small>
-            </div>
-
-            <ul>
-              <li>определение нужной процедуры</li>
-              <li>список базовых данных</li>
-              <li>ответы на вопросы</li>
-            </ul>
-
-            <button class="btn btn-secondary" type="button" data-whatsapp data-message="Здравствуйте! Интересует консультация по cita previa.">
-              Выбрать
-            </button>
+        <div class="case-grid">
+          <article class="card">
+            <h3 data-i18n="case1.title">Не получается найти слот</h3>
+            <p data-i18n="case1.text">Вы заходите на сайт каждый день, но свободных окон нет или система выдаёт ошибку.</p>
           </article>
 
-          <article class="card price highlight">
-            <span class="badge">Популярно</span>
-            <h3 style="margin-top: 14px;">Помощь с записью</h3>
-            <p>Подготовка данных, проверка категории и сопровождение процесса.</p>
-
-            <div class="price-tag" style="color: #fff;">
-              от 35€ <small style="color: rgba(255,255,255,0.78);">/ заявка</small>
-            </div>
-
-            <ul>
-              <li>проверка данных</li>
-              <li>подбор категории записи</li>
-              <li>инструкции перед визитом</li>
-            </ul>
-
-            <button class="btn" type="button" data-whatsapp data-message="Здравствуйте! Хочу помощь с записью на cita previa.">
-              Заказать
-            </button>
+          <article class="card">
+            <h3 data-i18n="case2.title">Непонятно, какую процедуру выбрать</h3>
+            <p data-i18n="case2.text">Названия процедур похожи, а ошибка может привести к неправильной записи.</p>
           </article>
 
-          <article class="card price">
-            <span class="badge">С сопровождением</span>
-            <h3 style="margin-top: 14px;">Комплексно</h3>
-            <p>Для случаев, где нужно больше внимания и пошаговая поддержка.</p>
-
-            <div class="price-tag">
-              индивидуально
-            </div>
-
-            <ul>
-              <li>разбор сложной ситуации</li>
-              <li>сопровождение по шагам</li>
-              <li>поддержка после записи</li>
-            </ul>
-
-            <button class="btn btn-secondary" type="button" data-whatsapp data-message="Здравствуйте! Нужна комплексная помощь с документами и cita previa.">
-              Обсудить
-            </button>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="reviews">
-      <div class="container">
-        <div class="section-head center">
-          <p class="eyebrow">Отзывы</p>
-          <h2>Что говорят клиенты</h2>
-          <p>Замените эти отзывы на реальные после запуска сайта.</p>
-        </div>
-
-        <div class="reviews">
-          <article class="review">
-            <div class="stars">★★★★★</div>
-            <p>
-              “Мне объяснили, какую запись выбирать, и помогли не ошибиться с формой.
-              Очень удобно, особенно когда всё на испанском.”
-            </p>
-            <div class="review-author">
-              <div class="avatar">А</div>
-              Анна, Valencia
-            </div>
-          </article>
-
-          <article class="review">
-            <div class="stars">★★★★★</div>
-            <p>
-              “Сначала пытался сам, но постоянно попадал не туда. После консультации стало понятно,
-              какие шаги делать дальше.”
-            </p>
-            <div class="review-author">
-              <div class="avatar">М</div>
-              Михаил, Madrid
-            </div>
-          </article>
-
-          <article class="review">
-            <div class="stars">★★★★★</div>
-            <p>
-              “Быстро ответили, проверили данные и дали понятную инструкцию перед визитом.
-              Рекомендую тем, кто недавно в Испании.”
-            </p>
-            <div class="review-author">
-              <div class="avatar">Е</div>
-              Елена, Barcelona
-            </div>
+          <article class="card">
+            <h3 data-i18n="case3.title">Нужно срочно</h3>
+            <p data-i18n="case3.text">Есть дедлайн по документам, работе, учёбе или поездке — выбирайте приоритетный тариф 2–5 дней.</p>
           </article>
         </div>
       </div>
@@ -1769,49 +1872,50 @@
     <section class="section" id="faq">
       <div class="container">
         <div class="section-head center">
-          <p class="eyebrow">FAQ</p>
-          <h2>Частые вопросы</h2>
+          <p class="eyebrow" data-i18n="faq.eyebrow">FAQ</p>
+          <h2 data-i18n="faq.title">Частые вопросы</h2>
         </div>
 
         <div class="faq-list">
           <details>
-            <summary>Вы продаёте сами слоты cita previa?</summary>
-            <p>
-              Нет. Мы не продаём государственные слоты и не являемся госорганом.
-              Мы оказываем консультационную и организационную помощь: помогаем разобраться,
-              подготовить данные и пройти процесс записи через официальные каналы.
+            <summary data-i18n="faq1.q">Когда нужно платить?</summary>
+            <p data-i18n="faq1.a">
+              Консультация бесплатна. Оплата за выбранный тариф производится только после успешного результата — когда запись на cita previa найдена и подтверждена.
             </p>
           </details>
 
           <details>
-            <summary>Можно ли записаться срочно?</summary>
-            <p>
-              Срочность зависит от города, процедуры и доступности окон на официальных порталах.
-              Мы можем оценить ситуацию и предложить оптимальный план действий.
+            <summary data-i18n="faq2.q">Что входит в приоритетный тариф за 100€?</summary>
+            <p data-i18n="faq2.a">
+              Приоритетный тариф — это активная помощь с поиском записи в ориентире 2–5 дней. Оплата только после подтверждённой cita.
             </p>
           </details>
 
           <details>
-            <summary>В каких городах вы помогаете?</summary>
-            <p>
-              Работаем онлайн по всей Испании: Madrid, Barcelona, Valencia, Alicante, Málaga,
-              Sevilla, Murcia, Zaragoza, Bilbao и другие города.
+            <summary data-i18n="faq3.q">Если запись не найдена, я плачу?</summary>
+            <p data-i18n="faq3.a">
+              Нет. За услугу записи вы платите только после успешного результата. Консультация остаётся бесплатной.
             </p>
           </details>
 
           <details>
-            <summary>Что нужно отправить для начала?</summary>
-            <p>
-              Напишите город, нужную процедуру, тип документа, ваш текущий статус и вопрос.
-              Если не знаете, какая процедура нужна, просто опишите ситуацию.
+            <summary data-i18n="faq4.q">Вы являетесь государственным сайтом?</summary>
+            <p data-i18n="faq4.a">
+              Нет. Мы не являемся государственным органом Испании. Мы оказываем консультационную и организационную помощь с записью через официальные сервисы.
             </p>
           </details>
 
           <details>
-            <summary>Вы помогаете, если я не говорю по-испански?</summary>
-            <p>
-              Да. Мы объясняем процесс на русском языке, помогаем понять испанские формы
-              и подсказываем, какие шаги выполнить.
+            <summary data-i18n="faq5.q">В каких городах вы помогаете?</summary>
+            <p data-i18n="faq5.a">
+              Работаем онлайн по всей Испании: Madrid, Barcelona, Valencia, Alicante, Málaga, Sevilla, Murcia, Zaragoza, Bilbao и другие города.
+            </p>
+          </details>
+
+          <details>
+            <summary data-i18n="faq6.q">Можно ли обратиться на украинском?</summary>
+            <p data-i18n="faq6.a">
+              Да. Мы поддерживаем русский и украинский языки, а также помогаем разобраться с испанскими формами.
             </p>
           </details>
         </div>
@@ -1821,28 +1925,31 @@
     <section class="section contact" id="contacts">
       <div class="container contact-grid">
         <div class="contact-card">
-          <p class="eyebrow">Связаться</p>
-          <h2>Оставьте заявку — подскажем следующий шаг</h2>
-          <p style="color: var(--muted); margin-top: 16px;">
-            Опишите ситуацию в двух-трёх предложениях. Мы ответим и уточним детали,
-            чтобы предложить подходящий вариант помощи.
+          <p class="eyebrow" data-i18n="contact.eyebrow">Связаться</p>
+          <h2 data-i18n="contact.title">Оставьте заявку — консультация бесплатно</h2>
+          <p style="color: var(--muted); margin-top: 16px;" data-i18n="contact.text">
+            Опишите ситуацию в двух-трёх предложениях. Мы подскажем процедуру, сроки и тариф. Оплата за запись — только после успешного результата.
           </p>
 
           <div class="contact-methods">
-            <button class="contact-method" type="button" data-whatsapp data-message="Здравствуйте! Хочу оставить заявку на помощь с cita previa.">
-              <span class="icon" style="margin:0;width:42px;height:42px;border-radius:14px;">
+            <button class="contact-method" type="button" data-whatsapp-key="contact">
+              <span class="method-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none"><path d="M20 11.6a8 8 0 0 1-11.8 7l-4.2 1.1 1.1-4.1A8 8 0 1 1 20 11.6Z" stroke="currentColor" stroke-width="2"/><path d="M9 8.8c.2 3 2.1 5 5.2 5.7l1.2-1.2 2 .5c.3.1.5.4.5.7-.1 1-.9 1.8-1.9 1.9-4.8-.2-8.6-3.7-9-8.5 0-1 .8-1.8 1.8-1.9.3 0 .6.2.7.5l.6 2-1.1 1.3Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
               </span>
-              WhatsApp
-              <span>Самый быстрый способ связи</span>
+              <span class="method-text">
+                WhatsApp
+                <small data-i18n="contact.whatsapp">Самый быстрый способ связи</small>
+              </span>
             </button>
 
             <a class="contact-method" href="mailto:hello@example.com">
-              <span class="icon" style="margin:0;width:42px;height:42px;border-radius:14px;">
+              <span class="method-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4V6Z" stroke="currentColor" stroke-width="2"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </span>
-              hello@example.com
-              <span>Замените на ваш email</span>
+              <span class="method-text">
+                hello@example.com
+                <small data-i18n="contact.email">Замените на ваш email</small>
+              </span>
             </a>
           </div>
         </div>
@@ -1851,48 +1958,47 @@
           <form class="lead-form" id="leadForm">
             <div class="form-grid">
               <label>
-                Имя
-                <input type="text" name="name" placeholder="Ваше имя" required />
+                <span data-i18n="form.name">Имя</span>
+                <input type="text" name="name" placeholder="Ваше имя" data-i18n-placeholder="form.namePh" required />
               </label>
 
               <label>
-                Город в Испании
-                <input type="text" name="city" placeholder="Например, Valencia" required />
+                <span data-i18n="form.city">Город в Испании</span>
+                <input type="text" name="city" placeholder="Например, Valencia" data-i18n-placeholder="form.cityPh" required />
               </label>
             </div>
 
             <div class="form-grid">
               <label>
-                Тип услуги
+                <span data-i18n="form.service">Тип услуги</span>
                 <select name="service" required>
-                  <option value="">Выберите</option>
-                  <option>NIE / TIE / Policía</option>
-                  <option>Extranjería</option>
-                  <option>Empadronamiento</option>
-                  <option>Seguridad Social</option>
-                  <option>DGT</option>
-                  <option>Не знаю, нужна консультация</option>
+                  <option value="" data-i18n="form.select">Выберите</option>
+                  <option data-i18n="form.opt1">NIE / TIE / Policía</option>
+                  <option data-i18n="form.opt2">Extranjería</option>
+                  <option data-i18n="form.opt3">Empadronamiento</option>
+                  <option data-i18n="form.opt4">Seguridad Social</option>
+                  <option data-i18n="form.opt5">DGT</option>
+                  <option data-i18n="form.opt6">Не знаю, нужна консультация</option>
                 </select>
               </label>
 
               <label>
-                Контакт
-                <input type="text" name="contact" placeholder="WhatsApp / Telegram / Email" required />
+                <span data-i18n="form.contact">Контакт</span>
+                <input type="text" name="contact" placeholder="WhatsApp / Telegram / Email" data-i18n-placeholder="form.contactPh" required />
               </label>
             </div>
 
             <label>
-              Опишите ситуацию
-              <textarea name="message" placeholder="Например: нужно продлить TIE в Valencia, не могу найти запись..." required></textarea>
+              <span data-i18n="form.message">Опишите ситуацию</span>
+              <textarea name="message" placeholder="Например: нужно продлить TIE в Valencia, не могу найти запись..." data-i18n-placeholder="form.messagePh" required></textarea>
             </label>
 
-            <button class="btn btn-primary" type="submit">
+            <button class="btn btn-primary" type="submit" data-i18n="form.btn">
               Отправить заявку в WhatsApp
             </button>
 
-            <p class="form-note">
-              Нажимая кнопку, вы переходите в WhatsApp с готовым текстом заявки.
-              Персональные данные отправляйте только если готовы передать их для обработки запроса.
+            <p class="form-note" data-i18n="form.note">
+              Нажимая кнопку, вы переходите в WhatsApp с готовым текстом заявки. Консультация бесплатна. Оплата за запись — только после успешного результата.
             </p>
           </form>
         </div>
@@ -1904,30 +2010,26 @@
     <div class="container footer-inner">
       <div>
         <strong style="color: var(--text);">CitaFácil España</strong>
-        <div>© <span id="year"></span> Онлайн-помощь с cita previa в Испании.</div>
-        <p class="disclaimer">
-          Дисклеймер: сайт не является государственным ресурсом Испании и не представляет
-          государственные органы. Мы оказываем консультационные и организационные услуги.
-          Наличие свободных окон и итоговое решение зависят от официальных ведомств.
+        <div>© <span id="year"></span> <span data-i18n="footer.copy">Помощь с cita previa в Испании. Консультация бесплатно.</span></div>
+        <p class="disclaimer" data-i18n="footer.disclaimer">
+          Дисклеймер: сайт не является государственным ресурсом Испании и не представляет государственные органы. Мы оказываем консультационные и организационные услуги. Наличие свободных окон зависит от официальных систем. Решение по документам принимает только соответствующее ведомство.
         </p>
       </div>
 
       <div class="footer-links">
-        <a href="#services">Услуги</a>
-        <a href="#prices">Стоимость</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contacts">Контакты</a>
+        <a href="#services" data-i18n="nav.services">Услуги</a>
+        <a href="#prices" data-i18n="nav.prices">Тарифы</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+        <a href="#contacts" data-i18n="nav.contacts">Контакты</a>
       </div>
     </div>
   </footer>
 
   <div class="mobile-cta" aria-label="Быстрые действия">
-    <button class="btn btn-primary" type="button" data-whatsapp data-message="Здравствуйте! Нужна помощь с cita previa в Испании.">
-      WhatsApp
+    <button class="btn btn-primary" type="button" data-whatsapp-key="mobile">
+      <span data-i18n="mobile.whatsapp">WhatsApp</span>
     </button>
-    <a class="btn btn-secondary" href="#contacts">
-      Заявка
-    </a>
+    <a class="btn btn-secondary" href="#contacts" data-i18n="mobile.request">Заявка</a>
   </div>
 
   <script>
@@ -1938,6 +2040,591 @@
     */
     const WHATSAPP_NUMBER = "34600000000";
 
+    const I18N = {
+      ru: {
+        "meta.title": "Cita previa в Испании — запись за 2–5 дней, оплата после результата | CitaFácil España",
+        "meta.description": "Бесплатная консультация и помощь с cita previa в Испании: NIE, TIE, Extranjería, Policía, empadronamiento. Приоритетная запись 2–5 дней — 100€, оплата после успешного результата.",
+        "skip": "Перейти к содержимому",
+        "logo.sub": "España онлайн",
+        "nav.services": "Услуги",
+        "nav.prices": "Тарифы",
+        "nav.process": "Как работаем",
+        "nav.article": "Гид",
+        "nav.faq": "FAQ",
+        "nav.contacts": "Контакты",
+        "nav.cta": "Бесплатная консультация",
+
+        "hero.eyebrow": "Консультация бесплатно · оплата после результата",
+        "hero.title": "Cita previa в Испании: поможем получить запись за 2–5 дней",
+        "hero.text": "Помогаем с записью на cita previa для NIE, TIE, Extranjería, Policía, empadronamiento и других процедур. Вы платите только после успешной подтверждённой записи.",
+        "hero.cta1": "Получить бесплатную консультацию",
+        "hero.cta2": "Смотреть тарифы",
+        "hero.pill1": "Оплата после записи",
+        "hero.pill2": "Приоритет 2–5 дней",
+        "hero.pill3": "По всей Испании",
+        "hero.imgAlt": "Помощь с cita previa в Испании",
+        "hero.miniTitle": "100€",
+        "hero.miniText": "приоритет 2–5 дней, оплата после результата",
+        "hero.cardTitle": "Пример результата",
+        "hero.cardStatus": "запись найдена",
+        "hero.row1Label": "Услуга",
+        "hero.row1Value": "TIE / Policía",
+        "hero.row2Label": "Срок",
+        "hero.row2Value": "2–5 дней",
+        "hero.row3Label": "Оплата",
+        "hero.row3Value": "после подтверждения",
+
+        "trust.t1": "0€",
+        "trust.d1": "консультация бесплатно",
+        "trust.t2": "2–5 дней",
+        "trust.d2": "приоритетная запись",
+        "trust.t3": "После результата",
+        "trust.d3": "никакой предоплаты за запись",
+        "trust.t4": "RU / UA / ES",
+        "trust.d4": "поддержка на понятном языке",
+
+        "services.eyebrow": "Что мы делаем",
+        "services.title": "Помогаем с популярными видами cita previa",
+        "services.text": "Разберём вашу ситуацию, выберем правильную категорию записи и поможем получить подтверждённую cita через официальные сервисы Испании.",
+
+        "service1.title": "Extranjería",
+        "service1.text": "Запись в офис по делам иностранцев для популярных процедур.",
+        "service1.li1": "подбор правильной процедуры",
+        "service1.li2": "проверка данных перед записью",
+        "service1.li3": "оплата после успешного результата",
+
+        "service2.title": "NIE / TIE / Policía",
+        "service2.text": "Одна из самых востребованных записей для иностранцев в Испании.",
+        "service2.li1": "помощь с записью в Policía Nacional",
+        "service2.li2": "приоритетный тариф 2–5 дней",
+        "service2.li3": "платите только после подтверждения",
+
+        "service3.title": "Empadronamiento",
+        "service3.text": "Помощь с записью в ayuntamiento для оформления прописки.",
+        "service3.li1": "выбор муниципалитета",
+        "service3.li2": "подсказки по документам",
+        "service3.li3": "инструкция перед визитом",
+
+        "service4.title": "Seguridad Social",
+        "service4.text": "Поможем понять, какая запись нужна в системе соцстраха.",
+        "service4.li1": "разбор ситуации",
+        "service4.li2": "подбор офиса",
+        "service4.li3": "сопровождение по шагам",
+
+        "service5.title": "DGT и другие записи",
+        "service5.text": "Консультационная помощь с другими административными cita.",
+        "service5.li1": "проверка доступности услуги",
+        "service5.li2": "ориентация по официальному сайту",
+        "service5.li3": "без предоплаты за запись",
+
+        "service6.title": "Бесплатная консультация",
+        "service6.text": "Если не знаете, какая cita нужна — начните с бесплатного разбора.",
+        "service6.li1": "определим процедуру",
+        "service6.li2": "подскажем тариф",
+        "service6.li3": "объясним дальнейшие шаги",
+
+        "advantages.eyebrow": "Почему выбирают нас",
+        "advantages.title": "Главное преимущество — вы платите после результата",
+        "advantages.text": "Мы берём оплату только после того, как запись найдена и подтверждена. Консультация всегда бесплатна.",
+        "adv1.title": "Без предоплаты",
+        "adv1.text": "Вы не рискуете деньгами: оплата за запись только после успешного подтверждения cita.",
+        "adv2.title": "Приоритет 2–5 дней",
+        "adv2.text": "Для срочных случаев есть приоритетный тариф — активный поиск ближайших доступных окон.",
+        "adv3.title": "Правильная категория",
+        "adv3.text": "Помогаем не ошибиться с процедурой, офисом и типом записи.",
+        "adv4.title": "Поддержка RU / UA",
+        "adv4.text": "Объясняем процесс на русском и украинском, помогаем разобраться с испанскими формами.",
+        "adv5.title": "По всей Испании",
+        "adv5.text": "Работаем онлайн с разными провинциями: Madrid, Barcelona, Valencia, Alicante, Málaga и другими.",
+        "adv6.title": "Понятный процесс",
+        "adv6.text": "После консультации вы знаете, что делать дальше, какие данные нужны и сколько будет стоить помощь.",
+
+        "prices.eyebrow": "Тарифы",
+        "prices.title": "Оплата только после успешной записи",
+        "prices.text": "Выберите скорость поиска. Консультация бесплатна, а оплата за запись — только после подтверждённого результата.",
+        "price0.badge": "Бесплатно",
+        "price0.title": "Консультация",
+        "price0.text": "Разберём ситуацию, подскажем нужную процедуру и подходящий тариф.",
+        "price0.price": "0€",
+        "price0.small": "/ бесплатно",
+        "price0.li1": "разбор вашей ситуации",
+        "price0.li2": "подбор типа cita",
+        "price0.li3": "рекомендация по срокам",
+        "price0.btn": "Получить консультацию",
+
+        "price1.badge": "Без спешки",
+        "price1.title": "Эконом",
+        "price1.text": "Для случаев, когда запись нужна, но нет критичной срочности.",
+        "price1.price": "50€",
+        "price1.small": "после результата",
+        "price1.li1": "ориентир 10–20 дней",
+        "price1.li2": "проверка данных",
+        "price1.li3": "оплата только после записи",
+        "price1.btn": "Выбрать эконом",
+
+        "price2.badge": "Оптимально",
+        "price2.title": "Стандарт",
+        "price2.text": "Активная помощь с поиском записи для большинства ситуаций.",
+        "price2.price": "70€",
+        "price2.small": "после результата",
+        "price2.li1": "ориентир 5–10 дней",
+        "price2.li2": "активный поиск окон",
+        "price2.li3": "оплата после подтверждения",
+        "price2.btn": "Выбрать стандарт",
+
+        "price3.badge": "Самый быстрый",
+        "price3.title": "Приоритет",
+        "price3.text": "Для срочных случаев: максимально активная работа с ближайшими доступными окнами.",
+        "price3.price": "100€",
+        "price3.small": "2–5 дней",
+        "price3.li1": "приоритетный поиск 2–5 дней",
+        "price3.li2": "проверка данных перед записью",
+        "price3.li3": "оплата только после результата",
+        "price3.btn": "Хочу приоритет",
+        "prices.note": "Важно: успешный результат — это подтверждённая запись на cita previa. Решение государственного органа по документам зависит только от официального ведомства.",
+
+        "process.eyebrow": "Как это работает",
+        "process.title": "4 шага до подтверждённой записи",
+        "process.text": "Мы работаем прозрачно: сначала бесплатная консультация, потом поиск записи, и только после подтверждённого результата — оплата.",
+        "process.btn": "Начать бесплатно",
+        "step1.title": "Вы пишете нам",
+        "step1.text": "Описываете город, процедуру и срочность. Консультация бесплатна.",
+        "step2.title": "Мы проверяем детали",
+        "step2.text": "Уточняем данные, категорию записи и возможные сроки.",
+        "step3.title": "Ищем доступное окно",
+        "step3.text": "Работаем с официальными системами и подбираем подходящую cita.",
+        "step4.title": "Вы получаете подтверждение",
+        "step4.text": "После успешной записи отправляем детали — и только тогда производится оплата.",
+
+        "cta.title": "Не знаете, какая cita нужна именно вам?",
+        "cta.text": "Напишите город, тип документа и вашу ситуацию — бесплатно подскажем ближайший понятный шаг.",
+        "cta.btn": "Спросить бесплатно",
+
+        "article.eyebrow": "Полезный гид",
+        "article.title": "Cita previa в Испании: как получить запись и не потерять время",
+        "article.lead": "Кратко объясняем, зачем нужна cita previa, почему сложно найти свободное окно и как мы помогаем получить подтверждённую запись без предоплаты.",
+        "article.photo": "Место для фото к статье",
+        "article.p1": "Cita previa — это предварительная запись на приём в государственное учреждение Испании. Она может понадобиться для NIE, TIE, процедур Extranjería, записи в Policía Nacional, оформления empadronamiento, Seguridad Social и других административных вопросов.",
+        "article.h1": "Почему запись бывает трудно получить",
+        "article.p2": "Главная сложность — ограниченное количество свободных окон. В разных провинциях Испании слоты появляются в разное время, сайты могут работать нестабильно, а название нужной процедуры не всегда очевидно.",
+        "article.li1": "не всегда понятно, какую категорию выбрать;",
+        "article.li2": "слоты могут появляться нерегулярно;",
+        "article.li3": "ошибка в данных может привести к потере записи;",
+        "article.li4": "инструкции часто доступны только на испанском языке.",
+        "article.h2": "Как помогает наш сервис",
+        "article.p3": "Мы бесплатно консультируем, проверяем исходные данные, помогаем выбрать правильную процедуру и ищем доступное окно. Если запись успешно найдена и подтверждена, вы оплачиваете выбранный тариф. Если результата нет — оплаты за запись нет.",
+        "article.h3": "Что значит “оплата после результата”",
+        "article.p4": "Результатом считается подтверждённая cita previa с датой, временем и данными приёма. Мы не берём предоплату за поиск записи. При этом важно понимать: итоговое решение по документам принимает только государственный орган Испании.",
+        "article.h4": "Что подготовить перед обращением",
+        "article.p5": "Для быстрого разбора напишите город, нужную процедуру, тип документа, текущий статус и желаемые сроки. Если вы не уверены, какая запись нужна, просто опишите ситуацию — консультация бесплатна.",
+        "aside.title": "Нужна cita?",
+        "aside.text": "Напишите нам в WhatsApp — бесплатно подскажем процедуру, сроки и тариф. Оплата только после успешной записи.",
+        "aside.btn": "Написать сейчас",
+
+        "cases.eyebrow": "Типичные ситуации",
+        "cases.title": "Когда к нам обращаются чаще всего",
+        "cases.text": "Если узнаёте свою ситуацию — напишите нам, консультация бесплатна.",
+        "case1.title": "Не получается найти слот",
+        "case1.text": "Вы заходите на сайт каждый день, но свободных окон нет или система выдаёт ошибку.",
+        "case2.title": "Непонятно, какую процедуру выбрать",
+        "case2.text": "Названия процедур похожи, а ошибка может привести к неправильной записи.",
+        "case3.title": "Нужно срочно",
+        "case3.text": "Есть дедлайн по документам, работе, учёбе или поездке — выбирайте приоритетный тариф 2–5 дней.",
+
+        "faq.eyebrow": "FAQ",
+        "faq.title": "Частые вопросы",
+        "faq1.q": "Когда нужно платить?",
+        "faq1.a": "Консультация бесплатна. Оплата за выбранный тариф производится только после успешного результата — когда запись на cita previa найдена и подтверждена.",
+        "faq2.q": "Что входит в приоритетный тариф за 100€?",
+        "faq2.a": "Приоритетный тариф — это активная помощь с поиском записи в ориентире 2–5 дней. Оплата только после подтверждённой cita.",
+        "faq3.q": "Если запись не найдена, я плачу?",
+        "faq3.a": "Нет. За услугу записи вы платите только после успешного результата. Консультация остаётся бесплатной.",
+        "faq4.q": "Вы являетесь государственным сайтом?",
+        "faq4.a": "Нет. Мы не являемся государственным органом Испании. Мы оказываем консультационную и организационную помощь с записью через официальные сервисы.",
+        "faq5.q": "В каких городах вы помогаете?",
+        "faq5.a": "Работаем онлайн по всей Испании: Madrid, Barcelona, Valencia, Alicante, Málaga, Sevilla, Murcia, Zaragoza, Bilbao и другие города.",
+        "faq6.q": "Можно ли обратиться на украинском?",
+        "faq6.a": "Да. Мы поддерживаем русский и украинский языки, а также помогаем разобраться с испанскими формами.",
+
+        "contact.eyebrow": "Связаться",
+        "contact.title": "Оставьте заявку — консультация бесплатно",
+        "contact.text": "Опишите ситуацию в двух-трёх предложениях. Мы подскажем процедуру, сроки и тариф. Оплата за запись — только после успешного результата.",
+        "contact.whatsapp": "Самый быстрый способ связи",
+        "contact.email": "Замените на ваш email",
+
+        "form.name": "Имя",
+        "form.namePh": "Ваше имя",
+        "form.city": "Город в Испании",
+        "form.cityPh": "Например, Valencia",
+        "form.service": "Тип услуги",
+        "form.select": "Выберите",
+        "form.opt1": "NIE / TIE / Policía",
+        "form.opt2": "Extranjería",
+        "form.opt3": "Empadronamiento",
+        "form.opt4": "Seguridad Social",
+        "form.opt5": "DGT",
+        "form.opt6": "Не знаю, нужна консультация",
+        "form.contact": "Контакт",
+        "form.contactPh": "WhatsApp / Telegram / Email",
+        "form.message": "Опишите ситуацию",
+        "form.messagePh": "Например: нужно продлить TIE в Valencia, не могу найти запись...",
+        "form.btn": "Отправить заявку в WhatsApp",
+        "form.note": "Нажимая кнопку, вы переходите в WhatsApp с готовым текстом заявки. Консультация бесплатна. Оплата за запись — только после успешного результата.",
+
+        "footer.copy": "Помощь с cita previa в Испании. Консультация бесплатно.",
+        "footer.disclaimer": "Дисклеймер: сайт не является государственным ресурсом Испании и не представляет государственные органы. Мы оказываем консультационные и организационные услуги. Наличие свободных окон зависит от официальных систем. Решение по документам принимает только соответствующее ведомство.",
+        "mobile.whatsapp": "WhatsApp",
+        "mobile.request": "Заявка",
+
+        "menu.open": "Открыть меню",
+        "menu.close": "Закрыть меню",
+
+        "wa.default": "Здравствуйте! Нужна помощь с cita previa в Испании. Хочу бесплатную консультацию.",
+        "wa.hero": "Здравствуйте! Хочу бесплатную консультацию по cita previa в Испании. Интересует оплата после результата.",
+        "wa.consult": "Здравствуйте! Хочу бесплатную консультацию по cita previa.",
+        "wa.economy": "Здравствуйте! Интересует тариф Эконом за 50€ с оплатой после результата.",
+        "wa.standard": "Здравствуйте! Интересует тариф Стандарт за 70€ с оплатой после результата.",
+        "wa.priority": "Здравствуйте! Интересует приоритетная запись 2–5 дней за 100€ с оплатой после результата.",
+        "wa.process": "Здравствуйте! Хочу начать с бесплатной консультации по cita previa.",
+        "wa.cta": "Здравствуйте! Не знаю, какая cita previa мне нужна. Хочу бесплатную консультацию.",
+        "wa.aside": "Здравствуйте! Нужна помощь с cita previa. Хочу узнать сроки и тариф.",
+        "wa.contact": "Здравствуйте! Хочу оставить заявку на помощь с cita previa. Консультация бесплатна?",
+        "wa.mobile": "Здравствуйте! Нужна помощь с cita previa в Испании.",
+        "wa.formIntro": "Здравствуйте! Хочу оставить заявку на помощь с cita previa.",
+        "wa.formPayment": "Понимаю, что консультация бесплатна, а оплата за запись — после успешного результата."
+      },
+
+      uk: {
+        "meta.title": "Cita previa в Іспанії — запис за 2–5 днів, оплата після результату | CitaFácil España",
+        "meta.description": "Безкоштовна консультація та допомога з cita previa в Іспанії: NIE, TIE, Extranjería, Policía, empadronamiento. Пріоритетний запис 2–5 днів — 100€, оплата після успішного результату.",
+        "skip": "Перейти до вмісту",
+        "logo.sub": "España онлайн",
+        "nav.services": "Послуги",
+        "nav.prices": "Тарифи",
+        "nav.process": "Як працюємо",
+        "nav.article": "Гід",
+        "nav.faq": "FAQ",
+        "nav.contacts": "Контакти",
+        "nav.cta": "Безкоштовна консультація",
+
+        "hero.eyebrow": "Консультація безкоштовно · оплата після результату",
+        "hero.title": "Cita previa в Іспанії: допоможемо отримати запис за 2–5 днів",
+        "hero.text": "Допомагаємо із записом на cita previa для NIE, TIE, Extranjería, Policía, empadronamiento та інших процедур. Ви платите тільки після успішного підтвердженого запису.",
+        "hero.cta1": "Отримати безкоштовну консультацію",
+        "hero.cta2": "Дивитися тарифи",
+        "hero.pill1": "Оплата після запису",
+        "hero.pill2": "Пріоритет 2–5 днів",
+        "hero.pill3": "По всій Іспанії",
+        "hero.imgAlt": "Допомога з cita previa в Іспанії",
+        "hero.miniTitle": "100€",
+        "hero.miniText": "пріоритет 2–5 днів, оплата після результату",
+        "hero.cardTitle": "Приклад результату",
+        "hero.cardStatus": "запис знайдено",
+        "hero.row1Label": "Послуга",
+        "hero.row1Value": "TIE / Policía",
+        "hero.row2Label": "Термін",
+        "hero.row2Value": "2–5 днів",
+        "hero.row3Label": "Оплата",
+        "hero.row3Value": "після підтвердження",
+
+        "trust.t1": "0€",
+        "trust.d1": "консультація безкоштовно",
+        "trust.t2": "2–5 днів",
+        "trust.d2": "пріоритетний запис",
+        "trust.t3": "Після результату",
+        "trust.d3": "жодної передоплати за запис",
+        "trust.t4": "RU / UA / ES",
+        "trust.d4": "підтримка зрозумілою мовою",
+
+        "services.eyebrow": "Що ми робимо",
+        "services.title": "Допомагаємо з популярними видами cita previa",
+        "services.text": "Розберемо вашу ситуацію, оберемо правильну категорію запису та допоможемо отримати підтверджену cita через офіційні сервіси Іспанії.",
+
+        "service1.title": "Extranjería",
+        "service1.text": "Запис до офісу у справах іноземців для популярних процедур.",
+        "service1.li1": "підбір правильної процедури",
+        "service1.li2": "перевірка даних перед записом",
+        "service1.li3": "оплата після успішного результату",
+
+        "service2.title": "NIE / TIE / Policía",
+        "service2.text": "Один із найпопулярніших записів для іноземців в Іспанії.",
+        "service2.li1": "допомога із записом у Policía Nacional",
+        "service2.li2": "пріоритетний тариф 2–5 днів",
+        "service2.li3": "оплата тільки після підтвердження",
+
+        "service3.title": "Empadronamiento",
+        "service3.text": "Допомога із записом в ayuntamiento для оформлення прописки.",
+        "service3.li1": "вибір муніципалітету",
+        "service3.li2": "підказки щодо документів",
+        "service3.li3": "інструкція перед візитом",
+
+        "service4.title": "Seguridad Social",
+        "service4.text": "Допоможемо зрозуміти, який запис потрібен у системі соцстраху.",
+        "service4.li1": "розбір ситуації",
+        "service4.li2": "підбір офісу",
+        "service4.li3": "супровід по кроках",
+
+        "service5.title": "DGT та інші записи",
+        "service5.text": "Консультаційна допомога з іншими адміністративними cita.",
+        "service5.li1": "перевірка доступності послуги",
+        "service5.li2": "орієнтація на офіційному сайті",
+        "service5.li3": "без передоплати за запис",
+
+        "service6.title": "Безкоштовна консультація",
+        "service6.text": "Якщо не знаєте, яка cita потрібна — почніть із безкоштовного розбору.",
+        "service6.li1": "визначимо процедуру",
+        "service6.li2": "підкажемо тариф",
+        "service6.li3": "пояснимо наступні кроки",
+
+        "advantages.eyebrow": "Чому обирають нас",
+        "advantages.title": "Головна перевага — ви платите після результату",
+        "advantages.text": "Ми беремо оплату тільки після того, як запис знайдено та підтверджено. Консультація завжди безкоштовна.",
+        "adv1.title": "Без передоплати",
+        "adv1.text": "Ви не ризикуєте грошима: оплата за запис тільки після успішного підтвердження cita.",
+        "adv2.title": "Пріоритет 2–5 днів",
+        "adv2.text": "Для термінових випадків є пріоритетний тариф — активний пошук найближчих доступних вікон.",
+        "adv3.title": "Правильна категорія",
+        "adv3.text": "Допомагаємо не помилитися з процедурою, офісом і типом запису.",
+        "adv4.title": "Підтримка RU / UA",
+        "adv4.text": "Пояснюємо процес українською та російською, допомагаємо розібратися з іспанськими формами.",
+        "adv5.title": "По всій Іспанії",
+        "adv5.text": "Працюємо онлайн з різними провінціями: Madrid, Barcelona, Valencia, Alicante, Málaga та іншими.",
+        "adv6.title": "Зрозумілий процес",
+        "adv6.text": "Після консультації ви знаєте, що робити далі, які дані потрібні та скільки коштуватиме допомога.",
+
+        "prices.eyebrow": "Тарифи",
+        "prices.title": "Оплата тільки після успішного запису",
+        "prices.text": "Оберіть швидкість пошуку. Консультація безкоштовна, а оплата за запис — тільки після підтвердженого результату.",
+        "price0.badge": "Безкоштовно",
+        "price0.title": "Консультація",
+        "price0.text": "Розберемо ситуацію, підкажемо потрібну процедуру та відповідний тариф.",
+        "price0.price": "0€",
+        "price0.small": "/ безкоштовно",
+        "price0.li1": "розбір вашої ситуації",
+        "price0.li2": "підбір типу cita",
+        "price0.li3": "рекомендація щодо строків",
+        "price0.btn": "Отримати консультацію",
+
+        "price1.badge": "Без поспіху",
+        "price1.title": "Економ",
+        "price1.text": "Для випадків, коли запис потрібен, але немає критичної терміновості.",
+        "price1.price": "50€",
+        "price1.small": "після результату",
+        "price1.li1": "орієнтир 10–20 днів",
+        "price1.li2": "перевірка даних",
+        "price1.li3": "оплата тільки після запису",
+        "price1.btn": "Обрати економ",
+
+        "price2.badge": "Оптимально",
+        "price2.title": "Стандарт",
+        "price2.text": "Активна допомога з пошуком запису для більшості ситуацій.",
+        "price2.price": "70€",
+        "price2.small": "після результату",
+        "price2.li1": "орієнтир 5–10 днів",
+        "price2.li2": "активний пошук вікон",
+        "price2.li3": "оплата після підтвердження",
+        "price2.btn": "Обрати стандарт",
+
+        "price3.badge": "Найшвидший",
+        "price3.title": "Пріоритет",
+        "price3.text": "Для термінових випадків: максимально активна робота з найближчими доступними вікнами.",
+        "price3.price": "100€",
+        "price3.small": "2–5 днів",
+        "price3.li1": "пріоритетний пошук 2–5 днів",
+        "price3.li2": "перевірка даних перед записом",
+        "price3.li3": "оплата тільки після результату",
+        "price3.btn": "Хочу пріоритет",
+        "prices.note": "Важливо: успішний результат — це підтверджений запис на cita previa. Рішення державного органу щодо документів залежить тільки від офіційного відомства.",
+
+        "process.eyebrow": "Як це працює",
+        "process.title": "4 кроки до підтвердженого запису",
+        "process.text": "Ми працюємо прозоро: спочатку безкоштовна консультація, потім пошук запису, і тільки після підтвердженого результату — оплата.",
+        "process.btn": "Почати безкоштовно",
+        "step1.title": "Ви пишете нам",
+        "step1.text": "Описуєте місто, процедуру та терміновість. Консультація безкоштовна.",
+        "step2.title": "Ми перевіряємо деталі",
+        "step2.text": "Уточнюємо дані, категорію запису та можливі строки.",
+        "step3.title": "Шукаємо доступне вікно",
+        "step3.text": "Працюємо з офіційними системами та підбираємо відповідну cita.",
+        "step4.title": "Ви отримуєте підтвердження",
+        "step4.text": "Після успішного запису надсилаємо деталі — і тільки тоді здійснюється оплата.",
+
+        "cta.title": "Не знаєте, яка cita потрібна саме вам?",
+        "cta.text": "Напишіть місто, тип документа та вашу ситуацію — безкоштовно підкажемо найближчий зрозумілий крок.",
+        "cta.btn": "Запитати безкоштовно",
+
+        "article.eyebrow": "Корисний гід",
+        "article.title": "Cita previa в Іспанії: як отримати запис і не втратити час",
+        "article.lead": "Коротко пояснюємо, навіщо потрібна cita previa, чому складно знайти вільне вікно та як ми допомагаємо отримати підтверджений запис без передоплати.",
+        "article.photo": "Місце для фото до статті",
+        "article.p1": "Cita previa — це попередній запис на прийом до державної установи Іспанії. Вона може знадобитися для NIE, TIE, процедур Extranjería, запису в Policía Nacional, оформлення empadronamiento, Seguridad Social та інших адміністративних питань.",
+        "article.h1": "Чому запис буває важко отримати",
+        "article.p2": "Головна складність — обмежена кількість вільних вікон. У різних провінціях Іспанії слоти з’являються в різний час, сайти можуть працювати нестабільно, а назва потрібної процедури не завжди очевидна.",
+        "article.li1": "не завжди зрозуміло, яку категорію обрати;",
+        "article.li2": "слоти можуть з’являтися нерегулярно;",
+        "article.li3": "помилка в даних може призвести до втрати запису;",
+        "article.li4": "інструкції часто доступні лише іспанською мовою.",
+        "article.h2": "Як допомагає наш сервіс",
+        "article.p3": "Ми безкоштовно консультуємо, перевіряємо вихідні дані, допомагаємо обрати правильну процедуру та шукаємо доступне вікно. Якщо запис успішно знайдено і підтверджено, ви оплачуєте обраний тариф. Якщо результату немає — оплати за запис немає.",
+        "article.h3": "Що означає “оплата після результату”",
+        "article.p4": "Результатом вважається підтверджена cita previa з датою, часом і даними прийому. Ми не беремо передоплату за пошук запису. Водночас важливо розуміти: остаточне рішення щодо документів приймає тільки державний орган Іспанії.",
+        "article.h4": "Що підготувати перед зверненням",
+        "article.p5": "Для швидкого розбору напишіть місто, потрібну процедуру, тип документа, поточний статус і бажані строки. Якщо ви не впевнені, який запис потрібен, просто опишіть ситуацію — консультація безкоштовна.",
+        "aside.title": "Потрібна cita?",
+        "aside.text": "Напишіть нам у WhatsApp — безкоштовно підкажемо процедуру, строки та тариф. Оплата тільки після успішного запису.",
+        "aside.btn": "Написати зараз",
+
+        "cases.eyebrow": "Типові ситуації",
+        "cases.title": "Коли до нас звертаються найчастіше",
+        "cases.text": "Якщо впізнаєте свою ситуацію — напишіть нам, консультація безкоштовна.",
+        "case1.title": "Не виходить знайти слот",
+        "case1.text": "Ви заходите на сайт щодня, але вільних вікон немає або система видає помилку.",
+        "case2.title": "Незрозуміло, яку процедуру обрати",
+        "case2.text": "Назви процедур схожі, а помилка може призвести до неправильного запису.",
+        "case3.title": "Потрібно терміново",
+        "case3.text": "Є дедлайн по документах, роботі, навчанню або поїздці — обирайте пріоритетний тариф 2–5 днів.",
+
+        "faq.eyebrow": "FAQ",
+        "faq.title": "Поширені питання",
+        "faq1.q": "Коли потрібно платити?",
+        "faq1.a": "Консультація безкоштовна. Оплата за обраний тариф здійснюється тільки після успішного результату — коли запис на cita previa знайдено та підтверджено.",
+        "faq2.q": "Що входить у пріоритетний тариф за 100€?",
+        "faq2.a": "Пріоритетний тариф — це активна допомога з пошуком запису в орієнтирі 2–5 днів. Оплата тільки після підтвердженої cita.",
+        "faq3.q": "Якщо запис не знайдено, я плачу?",
+        "faq3.a": "Ні. За послугу запису ви платите тільки після успішного результату. Консультація залишається безкоштовною.",
+        "faq4.q": "Ви є державним сайтом?",
+        "faq4.a": "Ні. Ми не є державним органом Іспанії. Ми надаємо консультаційну та організаційну допомогу із записом через офіційні сервіси.",
+        "faq5.q": "У яких містах ви допомагаєте?",
+        "faq5.a": "Працюємо онлайн по всій Іспанії: Madrid, Barcelona, Valencia, Alicante, Málaga, Sevilla, Murcia, Zaragoza, Bilbao та інші міста.",
+        "faq6.q": "Чи можна звернутися українською?",
+        "faq6.a": "Так. Ми підтримуємо українську та російську мови, а також допомагаємо розібратися з іспанськими формами.",
+
+        "contact.eyebrow": "Зв’язатися",
+        "contact.title": "Залиште заявку — консультація безкоштовна",
+        "contact.text": "Опишіть ситуацію у двох-трьох реченнях. Ми підкажемо процедуру, строки та тариф. Оплата за запис — тільки після успішного результату.",
+        "contact.whatsapp": "Найшвидший спосіб зв’язку",
+        "contact.email": "Замініть на ваш email",
+
+        "form.name": "Ім’я",
+        "form.namePh": "Ваше ім’я",
+        "form.city": "Місто в Іспанії",
+        "form.cityPh": "Наприклад, Valencia",
+        "form.service": "Тип послуги",
+        "form.select": "Оберіть",
+        "form.opt1": "NIE / TIE / Policía",
+        "form.opt2": "Extranjería",
+        "form.opt3": "Empadronamiento",
+        "form.opt4": "Seguridad Social",
+        "form.opt5": "DGT",
+        "form.opt6": "Не знаю, потрібна консультація",
+        "form.contact": "Контакт",
+        "form.contactPh": "WhatsApp / Telegram / Email",
+        "form.message": "Опишіть ситуацію",
+        "form.messagePh": "Наприклад: потрібно продовжити TIE у Valencia, не можу знайти запис...",
+        "form.btn": "Надіслати заявку в WhatsApp",
+        "form.note": "Натискаючи кнопку, ви переходите в WhatsApp із готовим текстом заявки. Консультація безкоштовна. Оплата за запис — тільки після успішного результату.",
+
+        "footer.copy": "Допомога з cita previa в Іспанії. Консультація безкоштовна.",
+        "footer.disclaimer": "Дисклеймер: сайт не є державним ресурсом Іспанії та не представляє державні органи. Ми надаємо консультаційні та організаційні послуги. Наявність вільних вікон залежить від офіційних систем. Рішення щодо документів приймає тільки відповідне відомство.",
+        "mobile.whatsapp": "WhatsApp",
+        "mobile.request": "Заявка",
+
+        "menu.open": "Відкрити меню",
+        "menu.close": "Закрити меню",
+
+        "wa.default": "Добрий день! Потрібна допомога з cita previa в Іспанії. Хочу безкоштовну консультацію.",
+        "wa.hero": "Добрий день! Хочу безкоштовну консультацію щодо cita previa в Іспанії. Цікавить оплата після результату.",
+        "wa.consult": "Добрий день! Хочу безкоштовну консультацію щодо cita previa.",
+        "wa.economy": "Добрий день! Цікавить тариф Економ за 50€ з оплатою після результату.",
+        "wa.standard": "Добрий день! Цікавить тариф Стандарт за 70€ з оплатою після результату.",
+        "wa.priority": "Добрий день! Цікавить пріоритетний запис 2–5 днів за 100€ з оплатою після результату.",
+        "wa.process": "Добрий день! Хочу почати з безкоштовної консультації щодо cita previa.",
+        "wa.cta": "Добрий день! Не знаю, яка cita previa мені потрібна. Хочу безкоштовну консультацію.",
+        "wa.aside": "Добрий день! Потрібна допомога з cita previa. Хочу дізнатися строки та тариф.",
+        "wa.contact": "Добрий день! Хочу залишити заявку на допомогу з cita previa. Консультація безкоштовна?",
+        "wa.mobile": "Добрий день! Потрібна допомога з cita previa в Іспанії.",
+        "wa.formIntro": "Добрий день! Хочу залишити заявку на допомогу з cita previa.",
+        "wa.formPayment": "Розумію, що консультація безкоштовна, а оплата за запис — після успішного результату."
+      }
+    };
+
+    const supportedLangs = ["ru", "uk"];
+    let currentLang = "ru";
+
+    function t(key) {
+      return I18N[currentLang][key] || I18N.ru[key] || key;
+    }
+
+    function setMeta(name, content) {
+      const meta = document.querySelector(name);
+      if (meta && content) {
+        meta.setAttribute("content", content);
+      }
+    }
+
+    function applyLanguage(lang, updateUrl = false) {
+      currentLang = supportedLangs.includes(lang) ? lang : "ru";
+      document.documentElement.lang = currentLang;
+
+      document.querySelectorAll("[data-i18n]").forEach((el) => {
+        const key = el.getAttribute("data-i18n");
+        const value = t(key);
+        if (value) el.textContent = value;
+      });
+
+      document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+        const key = el.getAttribute("data-i18n-placeholder");
+        const value = t(key);
+        if (value) el.setAttribute("placeholder", value);
+      });
+
+      document.querySelectorAll("[data-i18n-alt]").forEach((el) => {
+        const key = el.getAttribute("data-i18n-alt");
+        const value = t(key);
+        if (value) el.setAttribute("alt", value);
+      });
+
+      document.title = t("meta.title");
+      setMeta('meta[name="description"]', t("meta.description"));
+      setMeta('meta[property="og:title"]', t("meta.title"));
+      setMeta('meta[property="og:description"]', t("meta.description"));
+      setMeta('meta[name="twitter:title"]', t("meta.title"));
+      setMeta('meta[name="twitter:description"]', t("meta.description"));
+
+      document.querySelectorAll("[data-lang-switch]").forEach((button) => {
+        button.classList.toggle("is-active", button.getAttribute("data-lang-switch") === currentLang);
+      });
+
+      const menuButton = document.querySelector(".menu-toggle");
+      const nav = document.querySelector(".site-nav");
+      if (menuButton) {
+        const isOpen = nav && nav.classList.contains("is-open");
+        menuButton.setAttribute("aria-label", isOpen ? t("menu.close") : t("menu.open"));
+      }
+
+      localStorage.setItem("siteLang", currentLang);
+
+      if (updateUrl) {
+        const url = new URL(window.location.href);
+        url.searchParams.set("lang", currentLang);
+        window.history.replaceState({}, "", url);
+      }
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const urlLang = params.get("lang");
+    const savedLang = localStorage.getItem("siteLang");
+    const browserLang = navigator.language && navigator.language.toLowerCase().startsWith("uk") ? "uk" : "ru";
+    const initialLang = supportedLangs.includes(urlLang) ? urlLang : (supportedLangs.includes(savedLang) ? savedLang : browserLang);
+
+    applyLanguage(initialLang, false);
+
+    document.querySelectorAll("[data-lang-switch]").forEach((button) => {
+      button.addEventListener("click", () => {
+        applyLanguage(button.getAttribute("data-lang-switch"), true);
+      });
+    });
+
     const menuButton = document.querySelector(".menu-toggle");
     const nav = document.querySelector(".site-nav");
 
@@ -1945,25 +2632,29 @@
       menuButton.addEventListener("click", () => {
         const isOpen = nav.classList.toggle("is-open");
         menuButton.setAttribute("aria-expanded", String(isOpen));
+        menuButton.setAttribute("aria-label", isOpen ? t("menu.close") : t("menu.open"));
       });
 
       nav.querySelectorAll("a").forEach((link) => {
         link.addEventListener("click", () => {
           nav.classList.remove("is-open");
           menuButton.setAttribute("aria-expanded", "false");
+          menuButton.setAttribute("aria-label", t("menu.open"));
         });
       });
     }
 
     function openWhatsApp(message) {
       const cleanNumber = WHATSAPP_NUMBER.replace(/\D/g, "");
+      if (!cleanNumber) return;
       const url = `https://wa.me/${cleanNumber}?text=${encodeURIComponent(message)}`;
       window.open(url, "_blank", "noopener,noreferrer");
     }
 
-    document.querySelectorAll("[data-whatsapp]").forEach((button) => {
+    document.querySelectorAll("[data-whatsapp-key]").forEach((button) => {
       button.addEventListener("click", () => {
-        const message = button.getAttribute("data-message") || "Здравствуйте! Нужна помощь с cita previa в Испании.";
+        const key = button.getAttribute("data-whatsapp-key");
+        const message = t(`wa.${key}`) || t("wa.default");
         openWhatsApp(message);
       });
     });
@@ -1980,16 +2671,22 @@
         }
 
         const formData = new FormData(leadForm);
+        const serviceSelect = leadForm.querySelector('select[name="service"]');
+        const serviceText = serviceSelect && serviceSelect.selectedIndex >= 0
+          ? serviceSelect.options[serviceSelect.selectedIndex].textContent
+          : formData.get("service");
 
         const message = [
-          "Здравствуйте! Хочу оставить заявку на помощь с cita previa.",
+          t("wa.formIntro"),
           "",
-          `Имя: ${formData.get("name")}`,
-          `Город: ${formData.get("city")}`,
-          `Услуга: ${formData.get("service")}`,
-          `Контакт: ${formData.get("contact")}`,
+          `${t("form.name")}: ${formData.get("name")}`,
+          `${t("form.city")}: ${formData.get("city")}`,
+          `${t("form.service")}: ${serviceText}`,
+          `${t("form.contact")}: ${formData.get("contact")}`,
           "",
-          `Ситуация: ${formData.get("message")}`
+          `${t("form.message")}: ${formData.get("message")}`,
+          "",
+          t("wa.formPayment")
         ].join("\n");
 
         openWhatsApp(message);
